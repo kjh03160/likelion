@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from .models import *    
 
@@ -52,5 +52,16 @@ def create(request):
 def view(request):
     posts = Apply.objects.all()
     return render(request, 'detail.html', {'posts' : posts})
+
+def lookup(request, pk):
+    post = get_object_or_404(Apply, pk = pk)
+    return render(request, 'lookup.html', {'q' : post})
+
+def assess(request, pk):
+    post = get_object_or_404(Apply, pk = pk)
+    if request.method == "POST":
+        post.first_pf = request.POST['first']
+        post.save()
+        return redirect('view')
 
 
