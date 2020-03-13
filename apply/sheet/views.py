@@ -8,6 +8,9 @@ from .models import Signup
 def home(request):
     return render(request, 'index.html')
 
+# def login(request):
+#     return render(request, 'login.html')
+
 def signup_page(request):
     if request.method == "POST":
         if request.POST["password"] == request.POST["password2"] and len(request.POST["username"])==9:
@@ -53,11 +56,11 @@ def login(request):
         user = auth.authenticate(request, username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect('post')
+            return redirect('/')
         else:
-            return render(request, 'home.html', {'error':'학번 혹은 패스워드가 틀렸습니다'})
+            return render(request, 'login.html', {'error':'학번 혹은 패스워드가 틀렸습니다'})
     else:
-        return redirect('/')
+        return render(request, 'login.html')
 
 
 def logout(request):

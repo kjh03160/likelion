@@ -1,0 +1,88 @@
+@charset "utf-8";
+@font-face { font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); font-weight: normal; font-style: normal; }/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+/* 링크 데코레이션 none */
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; } 
+
+
+html,body{
+    background-color: black !important;
+    height: 100vh;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 5px;  /* 세로축 스크롤바 길이 */
+    height: 20px;  /* 가로축 스크롤바 길이 */
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: black;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    /* background-color: #34558b; */
+  }
+
+  video {
+    width: 80%;
+    height: 70%;
+    margin-left: 10%;
+    margin-top: 2%;
+    border-width: 2px;
+    border-color: coral;
+    border: 1px solid coral;
+
+
+}
+
+nav {
+margin: 30px;
+
+overflow: unset;
+}
+
+ul {
+overflow: auto;
+list-style-type: none;
+}
+
+li {
+height: 25px;
+float: left;
+margin-right: 0px;
+border-right: 1px solid rgb(235, 231, 231);
+padding: 0 20px;
+}
+
+li:last-child {
+border-right: none;
+}
+
+li a {
+text-decoration: none;
+color: white;
+font: 25px/1;
+font-family: 'GmarketSansMedium';
+
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+
+li a:hover {
+color:orange;
+}
+
+li.active a {
+font-weight: bold;
+color: rgb(255, 153, 0);
+}

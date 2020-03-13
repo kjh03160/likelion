@@ -1,0 +1,248 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Stylesheet" type="text/css" href="/static/css/base.css">
+
+<style>
+    html{
+        overflow: hidden;
+        margin: 10px;
+    }
+    #left{
+        float: left;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+    }
+    #right{
+        float: right;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+
+    }
+    /* img{
+        width: 700px;
+        height: 100%;
+    } */
+    
+    #back{
+        width: 70%;
+        height: 90%;
+        background-image: url("{% static '123.jpg' %}");
+        background-repeat : no-repeat;
+        background-size : cover;
+    }
+
+    #create {
+        margin-bottom: 50px;
+    }
+    #alert {
+        width: 290px;
+        text-align: center;
+    }
+</style>
+
+
+</head>
+<body>
+    
+    <nav>
+        <ul>
+          <li class="active"><a href="{% url 'home' %}">멋쟁이사자처럼 X 한국외대(서울)</a></li>
+          <li><a href="{%url 'login'%}">Login</a></li>
+          <li><a href="{% url 'submit' %}">지원서 작성</a></li>
+          <li >문의사항 : kis03160@likelion.org</li>
+        </ul>
+      </nav>
+
+<div id="back">
+
+<div id="right">
+
+
+	<div class="fullDiv">
+		<div class="innerLeftBlurred"></div>
+	</div>
+	<div class="innerRightBlurred"></div>
+	<div class="innerRight">
+		<div class="row">
+			<h1 class="text-center login-title"></h1>
+			<div class="account-wall">
+				<img class="profile-img" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t31.0-8/p960x960/16700336_1409094205782038_5866806659717364072_o.png?_nc_cat=105&_nc_sid=85a577&_nc_ohc=cBaMTjJ5DYQAX_XQT1W&_nc_ht=scontent-ssn1-1.xx&oh=9e7d2e79c9c1d6e89304b903db714927&oe=5E901E2B" alt="">
+				<form class="form-signin" action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+					<input type="text" class="form-control" placeholder="학번" name="username" required autofocus>
+					<input type="password" class="form-control" placeholder="Password" name="password" required>
+					<button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
+						Sign in
+					</button>
+				</form>
+                <a href="{% url 'signup' %}" class="text-center new-account" id="create">Create an account </a>
+                
+  
+    {%if error %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert">
+      <center><strong>  {{error}}</strong></center>
+      <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    {%endif%}
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+</body>
+
+
+<style>
+
+.fullDiv {
+    margin-top: 10%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.innerRightBlurred {
+	position: fixed;
+	opacity:0.8;
+	background-color: #202020;
+	left: auto;
+	width: 30.2%;
+	top: 93px;
+	bottom: 0;
+	right: 0; 
+}
+
+.innerRight {
+	position: fixed;
+	left: auto;
+	top: 85px;
+	bottom: 0;
+	right: 60px; 
+	color:#707070;
+}
+.innerLeft{
+    margin-top: 10%;
+
+	position: fixed;
+	opacity:1;
+	left: auto;
+	top: 93px;
+	bottom: 0;
+	left: 10px; 
+	right:330px;
+}
+
+.qrcode{
+	position: fixed;
+	opacity:1;
+	left: auto;
+	bottom: 10px;
+	right:330px;
+	padding-right: 10px;
+	padding-top:10px;
+}
+
+.innerLeftBlurred{
+	opacity:0.4;
+	background-color: #404040;
+	position: fixed;
+	left: auto;
+	top: 93px;
+	bottom: 0;
+	left: 10px; 
+	right:465px; 
+}
+.form-signin{
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox{
+	margin-bottom: 10px;
+}
+.checkbox{
+  color:rgb(14, 134, 232);
+	margin-left: 20px;
+}
+
+.form-signin .checkbox{
+	font-weight: normal;
+}
+.form-signin .form-control
+{
+	position: relative;
+	font-size: 18px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.form-signin .form-control:focus{
+	z-index: 2;
+}
+.form-signin input[type="text"]{
+	margin-bottom: 15px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 250px;
+  color:rgb(21,140,186);
+}
+.form-signin input[type="password"]{
+  color:rgb(21,140,186);
+	margin-bottom: 20px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	width: 250px;
+}
+.account-wall{
+	margin-top: auto;
+	margin-right: 10px;
+	padding-left: 200px;
+	padding: 20px;
+}
+.login-title{
+	color: #555;
+	font-size: 50px;
+	font-weight: 400;
+	display: block;
+}
+.profile-img{
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.need-help{
+	margin: 10px 0px 0px 45px;
+}
+.new-account{
+	display: block;
+}
+.sign-in{
+  margin-bottom:20px;
+}
+</style>
+
+<link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+</head>
+</html>

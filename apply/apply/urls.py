@@ -25,5 +25,6 @@ urlpatterns = [
     path('fix/', fix, name="fix"),
     path('submit/', create, name="submit"),
     path('update/', update, name="update"),
+    path('login/', login, name='login'),
 
 ]
