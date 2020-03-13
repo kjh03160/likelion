@@ -23,6 +23,9 @@
       <li><a href="{%url 'login'%}">Login</a></li>
       {%endif%}
       <li >문의사항 : kis03160@likelion.org</li>
+      {% if user.is_staff %}
+      <li style="float: right;"><a href="{% url 'view' %}">운영진</a></li>
+      {%endif%}
     </ul>
   </nav>
 

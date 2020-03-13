@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from .models import *    
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def fix(request):
     return render(request, 'fix.html')
-
+@login_required
 def update(request):
 
     if request.method == "POST":
@@ -26,7 +27,7 @@ def update(request):
         
     return render(request, 'fix.html', {"q" : objs})
 
-
+@login_required
 def create(request):
     objs = Apply.objects.filter(user = request.user)
     if len(objs):

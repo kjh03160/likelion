@@ -63,6 +63,9 @@
           <li><a href="{%url 'login'%}">Login</a></li>
           {%endif%}
           <li >문의사항 : kis03160@likelion.org</li>
+          {% if user.is_staff %}
+          <li style="float: right;"><a href="{% url 'view' %}">운영진</a></li>
+          {%endif%}
         </ul>
       </nav>
 
@@ -106,7 +109,7 @@
 
             
 
-                <input type="text" name="phone" class="form-control" placeholder="핸드폰 번호(- 없이)" required autofocus>
+                <input type="text" name="phone" class="form-control" placeholder="핸드폰 번호(-제외)" required autofocus>
 
                     <input type="text" name="email" class="form-control" placeholder="이메일" required autofocus>
 

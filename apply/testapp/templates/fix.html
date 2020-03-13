@@ -1,3 +1,6 @@
+{%if user.is_authenticated%}
+
+
 <main>
     <h1> '멋쟁이 사자처럼(한국외대-서울)' 제목</h1>
     <p> 매우 간단한 소개 </p>
@@ -102,3 +105,12 @@
 </form>
 </div>
 {%endif%}
+
+{% else %}
+
+
+<script type="text/javascript">
+    alert('로그인이 필요합니다.')
+    window.location.href = 'login';
+  </script>
+{% endif %}
