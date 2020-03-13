@@ -1,64 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" media="screen,projection" />
-    
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-<style>
-
-
-body {
-  font-family: 'Lato', sans-serif;
+  <style>
+* {
+  margin: 0;
+  padding: 0;
 }
-
-#title {
-  padding-left: 20px;
-  padding-top: 0px;
-  padding-bottom: 10px;
-  display: flex;
+ 
+nav {
+  margin: 50px;
 }
-
-#logo {
-  height: 50px;
-  align-self: center;
-  padding-right: 15px;
+ 
+ul {
+  overflow: auto;
+  list-style-type: none;
 }
-span {
-    color: orange;
+ 
+li {
+  height: 25px;
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #aaa;
+  padding: 0 20px;
 }
-
-
-</style>
-
-
+ 
+li:last-child {
+  border-right: none;
+}
+ 
+li a {
+  text-decoration: none;
+  color: #ccc;
+  font: 25px/1 Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+ 
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ 
+li a:hover {
+  color: #666;
+}
+ 
+li.active a {
+  font-weight: bold;
+  color: #333;
+}
+  </style>
 </head>
 <body>
-
-<div class="navbar-fixed">
-  <nav class="black">
-    <a href="#" class="brand-logo" id="title"><img src="https://s8.postimg.org/3z8gdlwgh/badge.png" id="logo" />
-      <span class=" text-lighten-3">Ardley Hill Academy</span></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#!"><span class="text-lighten-3">First Sidebar Link<span></a></li>
-      <li><a href="#!"><span class="text-lighten-3">Second Sidebar Link</span></a></li>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li class="active"><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
-    <ul id="slide-out" class="side-nav black">
-      <li><a href="#!"><span class=" text-lighten-3">First Sidebar Link</span></a></li>
-      <li class="navbar-text"><a href="#!"><span class=" text-lighten-3">Second Sidebar Link</span></a></li>
-    </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
   </nav>
-</div>
+
+
+
 </body>
 </html>
