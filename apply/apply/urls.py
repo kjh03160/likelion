@@ -24,7 +24,7 @@ urlpatterns = [
     path('signup/', signup_page, name='signup'),
     path('apply/', create, name="create"),
     path('update/', update, name="update"),
-    
+    path('logout/', logout, name="logout"),
     path('login/', login, name='login'),
     path('complete/', complete, name='complete'),
 

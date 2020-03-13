@@ -15,20 +15,37 @@
   <nav>
     <ul>
       <li class="active"><a href="{% url 'home' %}">멋쟁이사자처럼 X 한국외대(서울)</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="{%url 'logout'%}">Logout</a></li>
+      {% else %}
       <li><a href="{%url 'login'%}">Login</a></li>
+      {%endif%}
       <li><a href="{% url 'create' %}">지원서 작성</a></li>
       <li >문의사항 : kis03160@likelion.org</li>
     </ul>
   </nav>
 
 
-
-    <video id='vid' controls autoplay muted loop> 
+    <div id="main">
+      
+    <video id='vid' autoplay muted loop> 
         <source src="{% static 'pro.mp4' %}" type="video/mp4"> 
      </video>
 
+    </div>
 
 
 </body>
+
+<style>
+  #main{
+    margin-top: 5%;
+    width: 100%;
+    height: 80%;
+    background-image: url("{% static 'main_img.png'%}");
+    background-repeat : no-repeat;
+        background-size : cover;
+  }
+</style>
 
 </html>

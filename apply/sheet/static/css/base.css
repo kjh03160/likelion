@@ -13,6 +13,10 @@ a:hover, a:active { text-decoration: none; }
 html,body{
     background-color: black !important;
     height: 100vh;
+    
+overflow : auto;
+    /* margin-left: 0.5%;
+    margin-right: 0.5%; */
 }
 
 
@@ -34,9 +38,9 @@ html,body{
     height: 70%;
     margin-left: 10%;
     margin-top: 2%;
-    border-width: 2px;
-    border-color: coral;
-    border: 1px solid coral;
+    /* border-width: 2px; */
+    /* border-color: coral;
+    border: 1px solid coral; */
 
 
 }

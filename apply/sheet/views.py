@@ -13,12 +13,18 @@ def home(request):
 
 def signup_page(request):
     if request.method == "POST":
+
         if request.POST["password"] == request.POST["password2"] and len(request.POST["username"])==9:
-            user = User.objects.create_user(
-                username = request.POST["username"],
-                password = request.POST["password"],
-                email = request.POST["email"],
-            )
+            try:
+                user = User.objects.create_user(
+                    username = request.POST["username"],
+                    password = request.POST["password"],
+                    email = request.POST["email"],
+                )
+            
+            except:
+                return render(request, 'signup.html', {'error':'이미 존재하는 학번입니다.'})
+
             name = request.POST["name"]
             phone = request.POST["phone"]
             gender = request.POST["gender"]
@@ -27,8 +33,8 @@ def signup_page(request):
             signup.save()
             auth.login(request, user)
             return redirect('/')
-    # else:
-    #     form = SignupForm() 
+        else:
+            return render(request, 'signup.html', {'error':'학번이 잘못되었거나 비밀번호가 일치하지 않습니다'})
     return render(request, 'signup.html')
 
 def complete(request):
@@ -37,6 +43,7 @@ def complete(request):
 
 def signup(request):
     if request.method == "POST":
+
         if request.POST["password"] == request.POST["password2"] and len(request.POST["username"])==9:
             user = User.objects.create_user(
                 username = request.POST["username"],
@@ -57,7 +64,7 @@ def login(request):
         user = auth.authenticate(request, username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect('/')
+            return redirect('create')
         else:
             return render(request, 'login.html', {'error':'학번 혹은 패스워드가 틀렸습니다'})
     else:

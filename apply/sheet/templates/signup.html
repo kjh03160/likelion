@@ -1,21 +1,344 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Stylesheet" type="text/css" href="/static/css/base.css">
+
+<style>
+    html{
+        overflow: hidden;
+        margin: 10px;
+    }
+    #left{
+        float: left;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+    }
+    #right{
+        float: right;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+
+    }
+    /* img{
+        width: 700px;
+        height: 100%;
+    } */
+    
+    #back{
+        width: 70%;
+        height: 90%;
+        background-image: url("{% static '123.jpg' %}");
+        background-repeat : no-repeat;
+        background-size : cover;
+    }
+
+    #create {
+        margin-bottom: 50px;
+    }
+    #alert {
+        width: 290px;
+        text-align: center;
+    }
+</style>
+
+
+</head>
+<body>
+    
+    <nav>
+        <ul>
+          <li class="active"><a href="{% url 'home' %}">멋쟁이사자처럼 X 한국외대(서울)</a></li>
+          <li><a href="{%url 'login'%}">Login</a></li>
+          <li><a href="{% url 'create' %}">지원서 작성</a></li>
+          <li >문의사항 : kis03160@likelion.org</li>
+        </ul>
+      </nav>
+
+<div id="back">
+
+<div id="right">
+
+
+	<div class="fullDiv">
+		<div class="innerLeftBlurred"></div>
+	</div>
+	<div class="innerRightBlurred"></div>
+	<div class="innerRight">
+		<div class="row">
+			<h1 class="text-center login-title"></h1>
+			<div class="account-wall">
+				<img class="profile-img" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t31.0-8/p960x960/16700336_1409094205782038_5866806659717364072_o.png?_nc_cat=105&_nc_sid=85a577&_nc_ohc=cBaMTjJ5DYQAX_XQT1W&_nc_ht=scontent-ssn1-1.xx&oh=9e7d2e79c9c1d6e89304b903db714927&oe=5E901E2B" alt="">
+                
+                
 <form class="form-signin" method="POST" action="{%url 'signup'%}">
     {% csrf_token %}
 
-    <input type="text" name="username" class="form-control" placeholder="학번" required autofocus><BR>
-        <input type="text" name="major" class="form-control" placeholder="전공" required autofocus><BR>
-            <input type="radio" name="gender" value="M">남
-            <input type="radio" name="gender" value="F">여
+    <input type="text" name="username" class="form-control" placeholder="학번(ex:202012345)" required autofocus>
+        <input type="password" name="password" class="form-control" placeholder="비밀번호" required>
+        <input type="password" name="password2" class="form-control" placeholder="비밀번호 확인" required>
+        <input type="text" name="name" class="form-control" placeholder="이름"" required autofocus>
+
+
+            <input type="radio" id="r1" name="gender" value="M" required />
+            <label for="r1"><span></span>남</label>
+            <input type="radio" id="r2" name="gender" value="F" required />
+            <label for="r2"><span></span>여</label>
+            <!-- <input type="radio"   id="r1" />
+            <label for="gender"><span></span>남</label>
+            <p>
+            <input type="radio" name="gender"  id="r2" />
+            <label for="gender"><span></span>여</label> -->
+
+        <input type="text" name="major" class="form-control" placeholder="전공" required autofocus>
+
+
             
-            
-            <input type="text" name="name" class="form-control" placeholder="이름"" required autofocus><BR>
 
-                <input type="text" name="phone" class="form-control" placeholder="핸드폰 번호" required autofocus><BR>
+                <input type="text" name="phone" class="form-control" placeholder="핸드폰 번호(- 없이)" required autofocus>
 
-                    <input type="text" name="email" class="form-control" placeholder="이메일" required autofocus><BR>
+                    <input type="text" name="email" class="form-control" placeholder="이메일" required autofocus>
 
 
-        <input type="password" name="password" class="form-control" placeholder="비밀번호" required><br>
-        <input type="password" name="password2" class="form-control" placeholder="비밀번호 확인" required><br>
+        
+					<button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
+						Sign Up
+					</button>
+				</form>
+                
+  
+    {%if error %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert">
+      <center><strong>  {{error}}</strong></center>
+      <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    {%endif%}
+			</div>
+		</div>
+	</div>
 
-    <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">회원가입</button>
-  </form>
+</div>
+</div>
+</body>
+
+
+<style>
+
+.fullDiv {
+    margin-top: 10%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.innerRightBlurred {
+	position: fixed;
+	opacity:0.8;
+	background-color: #202020;
+	left: auto;
+	width: 30.2%;
+	top: 93px;
+	bottom: 0;
+	right: 0; 
+}
+
+.innerRight {
+	position: fixed;
+	left: auto;
+	top: 13%;
+	bottom: 0;
+	right: 6%; 
+	color:#707070;
+    overflow:auto;
+
+}
+
+.innerRight::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+.innerLeft{
+    margin-top: 10%;
+
+	position: fixed;
+	opacity:1;
+	left: auto;
+	top: 13%;
+	bottom: 0;
+	left: 10px; 
+	right:330px;
+}
+
+.qrcode{
+	position: fixed;
+	opacity:1;
+	left: auto;
+	bottom: 10px;
+	right:330px;
+	padding-right: 10px;
+	padding-top:10px;
+}
+
+.innerLeftBlurred{
+	opacity:0.4;
+	background-color: #404040;
+	position: fixed;
+	left: auto;
+	top: 93px;
+	bottom: 0;
+	left: 10px; 
+	right:30.1%; 
+}
+.form-signin{
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox{
+	margin-bottom: 10px;
+}
+.checkbox{
+  color:rgb(14, 134, 232);
+	margin-left: 20px;
+}
+
+.form-signin .checkbox{
+	font-weight: normal;
+}
+.form-signin .form-control
+{
+	position: relative;
+	font-size: 18px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.form-signin .form-control:focus{
+	z-index: 2;
+}
+.form-signin input[type="text"]{
+	margin-bottom: 15px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 250px;
+    background-color: black;
+    color:rgb(255, 123, 0);
+}
+.form-signin input[type="password"]{
+    color:rgb(255, 123, 0);
+	margin-bottom: 20px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+    background-color: black;
+
+	width: 250px;
+}
+.account-wall{
+	margin-top: auto;
+	margin-right: 10px;
+	padding-left: 200px;
+	padding: 20px;
+    
+}
+.login-title{
+	color: #555;
+	font-size: 50px;
+	font-weight: 400;
+	display: block;
+}
+.profile-img{
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.need-help{
+	margin: 10px 0px 0px 45px;
+}
+.new-account{
+	display: block;
+}
+.sign-in{
+  margin-bottom:20px;
+}
+
+
+
+
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label {
+    color:#f2f2f2;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+    color:#f2f2f2;
+    font-family:Arial, sans-serif;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -38px top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat;
+}
+
+
+
+
+
+
+</style>
+
+<link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+</head>
+</html>
+
+
+
+
