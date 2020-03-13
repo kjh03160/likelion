@@ -50,23 +50,32 @@ def create(request):
 
 
 def view(request):
-    posts = Apply.objects.all()
-    return render(request, 'detail.html', {'posts' : posts})
+    if request.user.is_staff:
+        posts = Apply.objects.all()
+        return render(request, 'detail.html', {'posts' : posts})
+    else:
+        return render(request, 'alert.html')
 
 def lookup(request, pk):
-    post = get_object_or_404(Apply, pk = pk)
-    return render(request, 'lookup.html', {'q' : post})
+    if request.user.is_staff:
+
+        post = get_object_or_404(Apply, pk = pk)
+        return render(request, 'lookup.html', {'q' : post})
+    else:
+        return render(request, 'alert.html')
 
 def assess(request, pk):
-    post = get_object_or_404(Apply, pk = pk)
-    if request.method == "POST":
-        try:
-            first = request.POST['first']
-            post.first_pf = first
-        except:
-            second = request.POST['second']
-            post.final_pf = second
-        post.save()
-        return redirect('view')
-
+    if request.user.is_staff:
+        post = get_object_or_404(Apply, pk = pk)
+        if request.method == "POST":
+            try:
+                first = request.POST['first']
+                post.first_pf = first
+            except:
+                second = request.POST['second']
+                post.final_pf = second
+            post.save()
+            return redirect('view')
+    else:
+        return render(request, 'alert.html')
 
