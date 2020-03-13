@@ -31,7 +31,8 @@ def signup_page(request):
     #     form = SignupForm() 
     return render(request, 'signup.html')
 
-
+def complete(request):
+    return render(request, 'complete.html')
 
 
 def signup(request):
