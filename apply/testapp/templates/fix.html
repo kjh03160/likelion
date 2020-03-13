@@ -1,64 +1,97 @@
+<main>
+    <h1> '멋쟁이 사자처럼(한국외대-서울)' 제목</h1>
+    <p> 매우 간단한 소개 </p>
+
+</main>
+
 {% if q %}
 
-<form action="{% url 'update' %}" action="POST">
-
-            <h4>1. 자기소개 및 지원동기 (최대 1000자)</h4>
-            <textarea rows="10" cols="100" name="app_q1">{{q.q2}}</textarea>
+<form action="{% url 'update' %}" method="POST">
+{% csrf_token %}
+            <h4>1. 자기소개 및 지원동11111111기</h4>
+            <textarea rows="10" cols="100" name="q1" required>{{q.q1}}</textarea>
             <br>
             <br>
 
-          <h4>2. 두번째 문제</h4>
-            <textarea rows="10" cols="100" name="app_q2"></textarea>
+            <h4>2. 마음이 끌리는 무언가에 몰입해 일정 수준의 결과물을 만들어낸 경험이 있나요?</h4>
+            <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요! 반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만, 어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
+            <textarea rows="10" cols="100" name="q2" required>{{q.q2}}</textarea>
             <br>
             <br>
 
-          <h4>3. 세번째 문제 (최대 1000자)</h4>
-            <textarea rows="10" cols="100" name="app_q3"></textarea>
+            <h4>3. 세번째 질문</h4>
+            <textarea rows="10" cols="100" name="q3" required>{{q.q3}}</textarea>
             <br>
             <br>
 
-          <h4>4. 네번째 문제 (최대 1000자)</h4>
-            <textarea rows="10" cols="100" name="app_q4"></textarea>
+          <h4>4. 네번째 문제</h4>
+            <textarea rows="10" cols="100" name="q4" required>{{q.q4}}</textarea>
             <br>
             <br>
-          
-          <h4>5. 다섯번째 문제 (최대 1000자)</h4>
-            <textarea rows="10" cols="100" name="app_q5"></textarea>
+        
+        <h4>5. 다섯번째 문제 (최대 1000자)</h4>
+            <textarea rows="10" cols="100" name="q5" required>{{q.q5}}</textarea>
             <br>
             <br>
 
-      <input class="btn btn-dark" type="submit" value="제출하기">
-      <br>
-      <br>
-      <a href="{% url 'home' %}"> 홈으로 돌아가기 </a>
+          <h4>5. Codecademy 듣고 왔니?</h4>
+          {% if q.codecademy == "Y" %}
+          <input name="codecademy" type="radio" value="yes" required/>
+          <label for="codecademy">네</label>
+          <input name="codecademy" type="radio" value="no" required/>
+          <label for="codecademy">아니오</label>
+      
+      {%else%}
+      <input name="codecademy" type="radio" value="yes" required/>
+      <label for="codecademy">네</label>
+      <input name="codecademy" type="radio" value="no" required/>
+      <label for="codecademy">아니오</label>
+      
+       {%endif%}
+            <br>
+            <br>
+    
+    <input class="btn btn-dark" type="submit" value="제출하기">
+        <a href="{% url 'home' %}"> 홈으로 돌아가기 </a>
       </form>
   </div>
   {% else %}
   
 <form action="{% url 'create' %}" action="POST">
+    {% csrf_token %}
 
-    <h4>1. 자기소개 및 지원동기 (최대 1000자)</h4>
-    <textarea rows="10" cols="100" name="app_q1"></textarea>
+    <h4>1. 자기소개 및 지원동222222222기 (최대 1000자)</h4>
+    <textarea rows="10" cols="100" name="q1" required></textarea>
     <br>
     <br>
 
-  <h4>2. 두번째 문제</h4>
-    <textarea rows="10" cols="100" name="app_q2"></textarea>
+    <h4>2. 마음이 끌리는 무언가에 몰입해 일정 수준의 결과물을 만들어낸 경험이 있나요?</h4>
+    <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요! 반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만, 어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
+    <textarea rows="10" cols="100" name="q2" required></textarea>
     <br>
     <br>
 
   <h4>3. 세번째 문제 (최대 1000자)</h4>
-    <textarea rows="10" cols="100" name="app_q3"></textarea>
+    <textarea rows="10" cols="100" name="q3" required></textarea>
     <br>
     <br>
 
   <h4>4. 네번째 문제 (최대 1000자)</h4>
-    <textarea rows="10" cols="100" name="app_q4"></textarea>
+    <textarea rows="10" cols="100" name="q4" required></textarea>
+    <br>
+    <br>
+
+  <h4>5. 다섯번째 문제 (최대 1000자)</h4>
+    <textarea rows="10" cols="100" name="q5" required>{{q.q5}}</textarea>
     <br>
     <br>
   
-  <h4>5. 다섯번째 문제 (최대 1000자)</h4>
-    <textarea rows="10" cols="100" name="app_q5"></textarea>
+  <h4>5. Codecademy 듣고 왔니?</h4>
+
+  <input name="codecademy" type="radio" value="yes" required/>
+  <label for="codecademy">네</label>
+  <input name="codecademy" type="radio" value="no" required/>
+  <label for="codecademy">아니오</label>
     <br>
     <br>
 
