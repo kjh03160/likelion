@@ -11,14 +11,15 @@
 </head>
 <body>
 
-    <nav>
-        <ul>
-          <li class="active"><a href="#">멋쟁이사자처럼 X 한국외대(서울)</a></li>
-          <li><a href="{%url 'login'%}">Login</a></li>
-          <li><a href="#">지원서 작성</a></li>
-          <li><a href="#">문의사항 : kis03160@likelion.org</a></li>
-        </ul>
-      </nav>
+    
+  <nav>
+    <ul>
+      <li class="active"><a href="{% url 'home' %}">멋쟁이사자처럼 X 한국외대(서울)</a></li>
+      <li><a href="{%url 'login'%}">Login</a></li>
+      <li><a href="{% url 'create' %}">지원서 작성</a></li>
+      <li >문의사항 : kis03160@likelion.org</li>
+    </ul>
+  </nav>
 
 
 
