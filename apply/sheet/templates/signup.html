@@ -34,7 +34,7 @@
     #back{
         width: 70%;
         height: 90%;
-        background-image: url("{% static '123.jpg' %}");
+        background-image: url("{% static 'login.jpg' %}");
         background-repeat : no-repeat;
         background-size : cover;
     }
@@ -54,9 +54,14 @@
     
     <nav>
         <ul>
-          <li class="active"><a href="{% url 'home' %}">멋쟁이사자처럼 X 한국외대(서울)</a></li>
+          <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{%url 'logout'%}">Logout</a></li>
+          <li><a href="{% url 'create' %}">Apply</a></li>
+    
+          {% else %}
           <li><a href="{%url 'login'%}">Login</a></li>
-          <li><a href="{% url 'create' %}">지원서 작성</a></li>
+          {%endif%}
           <li >문의사항 : kis03160@likelion.org</li>
         </ul>
       </nav>

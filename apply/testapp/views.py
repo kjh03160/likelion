@@ -39,6 +39,8 @@ def create(request):
         apply.q4 = request.POST['q4']
         apply.q5 = request.POST['q5']
         apply.codecademy = request.POST['codecademy']
+        apply.user = request.user
+        apply.signup = Signup.objects.get(user=request.user)
         apply.save()
         return render(request, 'fix.html') #추후에 complete로 바꿀것
     else:
@@ -46,5 +48,9 @@ def create(request):
         # 그냥 맨 처음 들어올때
         return render(request, 'fix.html', {'q' : objs})
 
+
+def view(request):
+    posts = Apply.objects.all()
+    return render(request, 'detail.html', {'posts' : posts})
 
 

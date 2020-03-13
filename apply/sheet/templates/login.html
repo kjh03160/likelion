@@ -40,7 +40,8 @@
     }
 
     #create {
-        margin-bottom: 50px;
+		margin-bottom: 50px;
+		font-size: large;
     }
     #alert {
         width: 290px;
@@ -52,15 +53,19 @@
 </head>
 <body>
     
-    <nav>
-        <ul>
-          <li class="active"><a href="{% url 'home' %}">멋쟁이사자처럼 X 한국외대(서울)</a></li>
-          <li><a href="{%url 'login'%}">Login</a></li>
-          <li><a href="{% url 'create' %}">지원서 작성</a></li>
-          <li >문의사항 : kis03160@likelion.org</li>
-        </ul>
-      </nav>
-
+	<nav>
+		<ul>
+		  <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
+		  {% if user.is_authenticated %}
+		  <li><a href="{%url 'logout'%}">Logout</a></li>
+		  <li><a href="{% url 'create' %}">Apply</a></li>
+	
+		  {% else %}
+		  <li><a href="{%url 'login'%}">Login</a></li>
+		  {%endif%}
+		  <li >문의사항 : kis03160@likelion.org</li>
+		</ul>
+	  </nav>
 <div id="back">
 
 <div id="right">
@@ -202,14 +207,19 @@
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	width: 250px;
-  color:rgb(21,140,186);
+	background-color: black;
+
+    color:rgb(255, 123, 0);
 }
 .form-signin input[type="password"]{
-  color:rgb(21,140,186);
 	margin-bottom: 20px;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	width: 250px;
+	background-color: black;
+
+	color:rgb(255, 123, 0);
+
 }
 .account-wall{
 	margin-top: auto;

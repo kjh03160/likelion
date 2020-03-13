@@ -57,7 +57,7 @@
   </div>
   {% else %}
   
-<form action="{% url 'create' %}" action="POST">
+<form action="{% url 'create' %}" method="POST">
     {% csrf_token %}
 
     <h4>1. 자기소개 및 지원동222222222기 (최대 1000자)</h4>
