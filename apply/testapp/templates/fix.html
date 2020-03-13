@@ -1,6 +1,9 @@
+{% if q %}
+
+<form action="{% url 'update' %}" action="POST">
 
             <h4>1. 자기소개 및 지원동기 (최대 1000자)</h4>
-            <textarea rows="10" cols="100" name="app_q1"></textarea>
+            <textarea rows="10" cols="100" name="app_q1">{{q.q2}}</textarea>
             <br>
             <br>
 
@@ -30,3 +33,39 @@
       <a href="{% url 'home' %}"> 홈으로 돌아가기 </a>
       </form>
   </div>
+  {% else %}
+  
+<form action="{% url 'create' %}" action="POST">
+
+    <h4>1. 자기소개 및 지원동기 (최대 1000자)</h4>
+    <textarea rows="10" cols="100" name="app_q1"></textarea>
+    <br>
+    <br>
+
+  <h4>2. 두번째 문제</h4>
+    <textarea rows="10" cols="100" name="app_q2"></textarea>
+    <br>
+    <br>
+
+  <h4>3. 세번째 문제 (최대 1000자)</h4>
+    <textarea rows="10" cols="100" name="app_q3"></textarea>
+    <br>
+    <br>
+
+  <h4>4. 네번째 문제 (최대 1000자)</h4>
+    <textarea rows="10" cols="100" name="app_q4"></textarea>
+    <br>
+    <br>
+  
+  <h4>5. 다섯번째 문제 (최대 1000자)</h4>
+    <textarea rows="10" cols="100" name="app_q5"></textarea>
+    <br>
+    <br>
+
+<input class="btn btn-dark" type="submit" value="제출하기">
+<br>
+<br>
+<a href="{% url 'home' %}"> 홈으로 돌아가기 </a>
+</form>
+</div>
+{%endif%}

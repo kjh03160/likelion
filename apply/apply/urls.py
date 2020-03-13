@@ -23,5 +23,7 @@ urlpatterns = [
     path('', home, name='home'),
     path('signup/', signup_page, name='signup'),
     path('fix/', fix, name="fix"),
-    path('submit/', submit, name="submit"),
+    path('submit/', create, name="submit"),
+    path('update/', update, name="update"),
+
 ]

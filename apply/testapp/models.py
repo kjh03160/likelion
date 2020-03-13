@@ -3,9 +3,9 @@ from django.contrib.auth.models import User
 from sheet.models import Signup
 
 class Apply(models.Model):
-    user = models.ForeignKey(Signup, related_name='signup',on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='apply_user',on_delete=models.CASCADE)
     HTML = (
-        ('Y', 'yes')
+        ('Y', 'yes'),
         ('N', 'no')
     )
     q1 = models.TextField()
