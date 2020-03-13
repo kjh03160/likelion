@@ -1,6 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
+from sheet.models import Signup
 
-class Apply(models, Model):
+class Apply(models.Model):
+    user = models.ForeignKey(Signup, related_name='signup',on_delete=models.CASCADE)
     HTML = (
         ('Y', 'yes')
         ('N', 'no')
