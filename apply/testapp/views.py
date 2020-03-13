@@ -60,7 +60,12 @@ def lookup(request, pk):
 def assess(request, pk):
     post = get_object_or_404(Apply, pk = pk)
     if request.method == "POST":
-        post.first_pf = request.POST['first']
+        try:
+            first = request.POST['first']
+            post.first_pf = first
+        except:
+            second = request.POST['second']
+            post.final_pf = second
         post.save()
         return redirect('view')
 

@@ -62,7 +62,7 @@
           word-break: keep-all;
         }
         a {
-              color: #c2306d;
+              color:cornflowerblue;
               text-decoration: none;
               z-index: 10;
             }
@@ -201,8 +201,8 @@
                                     <td width="60px"><strong>{{post.signup.name}}</strong></td>
                                     <td width="60px"><strong>{{post.signup.major}}</strong></td>
                                     <td width="30px"><strong>{{post.signup.gender}}</strong></td>
-                                    <td width="60px"><strong>{{post.signup.first_pf}}</strong></td>
-                                    <td width="60px"><strong>{{post.signup.final_pf}}</strong></td>
+                                    <td width="60px"><strong>{{post.signup.first_pf|default:"-"}}</strong></td>
+                                    <td width="60px"><strong>{{post.signup.final_pf|default:"-"}}</strong></td>
                                   </tr>
                                 </div>
                                 </a>
@@ -212,16 +212,5 @@
                         </table>
                       </div>
                     </section>
-                    <div class="buttons-con">
-                        <div class="action-link-wrap">
-                          <a href="Result.html" class="link-button link-back-button">Go Back</a>
-                        </div>
-                      </div>
-                    <!-- follow me template -->
-                    <div class="made-with-love">
-                      Made 
-                      <i>★</i> by
-                      <a target="_blank" href="https://www.instagram.com/juna_km/">Junha Kim</a>
-                    </div>
       </body>
       </html>

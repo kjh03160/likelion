@@ -144,11 +144,18 @@
           {{q.codecademy}}
             <br>
             <br>
-    
+
+            {% if not q.first_pf %}
             <input name="first" type="radio" value="P" required/>
             <label for="first">1차합격</label>
             <input name="first" type="radio" value="F" required/>
             <label for="first">불합격</label>
+            {% else %}
+            <input name="second" type="radio" value="P" required/>
+            <label for="second">최종합격</label>
+            <input name="second" type="radio" value="F" required/>
+            <label for="second">불합격</label>
+            {%endif%}
 
     <input class="btn btn-dark" type="submit" value="제출하기">
         <a href="{% url 'home' %}"> 홈으로 돌아가기 </a>
