@@ -43,7 +43,7 @@ def create(request):
         apply.user = request.user
         apply.signup = Signup.objects.get(user=request.user)
         apply.save()
-        return render(request, 'fix.html') #추후에 complete로 바꿀것
+        return render(request, 'complete.html') #추후에 complete로 바꿀것
     else:
         print(22222222222222) #test
         # 그냥 맨 처음 들어올때
