@@ -41,22 +41,6 @@ def complete(request):
     return render(request, 'complete.html')
 
 
-def signup(request):
-    if request.method == "POST":
-
-        if request.POST["password"] == request.POST["password2"] and len(request.POST["username"])==9:
-            user = User.objects.create_user(
-                username = request.POST["username"],
-                password = request.POST["password"]
-            )
-            auth.login(request, user)
-            return redirect('/')
-        else:
-            return render(request, 'signup.html', {'error':'학번이 잘못되었거나 비밀번호가 일치하지 않습니다'})
-        return render(request, 'signup.html')
-    
-    return render(request, 'signup.html')
-
 def login(request):
     if request.method == "POST":
         username = request.POST["username"]
@@ -74,3 +58,24 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+
+def profile(request):
+    if request.user.is_authenticated: 
+        user1 = Signup.objects.get(user = request.user)
+        if request.method == "POST":
+            if request.POST["password"] != request.POST["password2"]:
+                return render(request, 'profile.html', {'error':'비밀번호가 일치하지 않습니다' , 'user1' : user1})
+            user1.user.password = request.POST['password']
+            user1.user.email = request.POST['email']
+            user1.name = request.POST["name"]
+            user1.phone = request.POST["phone"]
+            user1.gender = request.POST["gender"]
+            user1.major = request.POST["major"]
+            user1.save()
+            return redirect('/')
+        
+        else:
+            return render(request, 'profile.html', {'user1' : user1})
+    else:
+        return redirect('alert')

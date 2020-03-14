@@ -1,0 +1,196 @@
+.fullDiv {
+    margin-top: 10%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.innerRightBlurred {
+	position: fixed;
+	opacity:0.8;
+	background-color: #202020;
+	left: auto;
+	width: 30.2%;
+	top: 93px;
+	bottom: 0;
+	right: 0; 
+}
+
+.innerRight {
+	position: fixed;
+	left: auto;
+	top: 13%;
+	bottom: 0;
+	right: 6%; 
+	color:#707070;
+    overflow:auto;
+
+}
+
+.innerRight::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+.innerLeft{
+    margin-top: 10%;
+
+	position: fixed;
+	opacity:1;
+	left: auto;
+	top: 13%;
+	bottom: 0;
+	left: 10px; 
+	right:330px;
+}
+
+.qrcode{
+	position: fixed;
+	opacity:1;
+	left: auto;
+	bottom: 10px;
+	right:330px;
+	padding-right: 10px;
+	padding-top:10px;
+}
+
+.innerLeftBlurred{
+	opacity:0.4;
+	background-color: #404040;
+	position: fixed;
+	left: auto;
+	top: 93px;
+	bottom: 0;
+	left: 10px; 
+	right:30.1%; 
+}
+.form-signin{
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox{
+	margin-bottom: 10px;
+}
+.checkbox{
+  color:rgb(14, 134, 232);
+	margin-left: 20px;
+}
+
+.form-signin .checkbox{
+	font-weight: normal;
+}
+.form-signin .form-control
+{
+	position: relative;
+	font-size: 18px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.form-signin .form-control:focus{
+	z-index: 2;
+}
+.form-signin input[type="text"]{
+	margin-bottom: 15px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 250px;
+    background-color: black;
+    color:rgb(255, 123, 0);
+}
+.form-signin input[type="password"]{
+    color:rgb(255, 123, 0);
+	margin-bottom: 20px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+    background-color: black;
+
+	width: 250px;
+}
+.account-wall{
+	margin-top: auto;
+	margin-right: 10px;
+	padding-left: 200px;
+	padding: 20px;
+    
+}
+.login-title{
+	color: #555;
+	font-size: 50px;
+	font-weight: 400;
+	display: block;
+}
+.profile-img{
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.need-help{
+	margin: 10px 0px 0px 45px;
+}
+.new-account{
+	display: block;
+}
+.sign-in{
+  margin-bottom:20px;
+}
+
+
+
+
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label {
+    color:#f2f2f2;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+    color:#f2f2f2;
+    font-family:Arial, sans-serif;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -38px top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat;
+}
+

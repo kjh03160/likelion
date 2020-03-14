@@ -1,4 +1,75 @@
-<h1><center>지원서가 제출/수정되었습니다. 감사합니다.</center></h1>
-<br>
-<br>
-<h5><center><a href={% url 'home' %}>홈으로</a></center></h5>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIKELION X HUFS</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'like.jpg'%}">
+<link rel="Stylesheet" type="text/css" href="/static/css/base.css">
+</head>
+<body style="height: 78% !important;">
+
+      
+    <nav style="height: initial !important;">
+        <ul>
+          <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{%url 'logout'%}">Logout</a></li>
+          <li><a href="{% url 'create' %}">Apply</a></li>
+          <li><a href="{% url 'profile' %}">Profile</a></li>
+    
+    
+          {% else %}
+          <li><a href="{%url 'login'%}">Login</a></li>
+          {%endif%}
+          <li >오류 및 문의사항 : kis03160@likelion.org</li>
+          {% if user.is_staff %}
+          <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">운영진</a></li>
+          {%endif%}
+        </ul>
+      </nav>
+    
+
+
+    <div id="main">
+
+        <div id="text">
+        <h1><center>지원서가 제출/수정되었습니다. 감사합니다.</center></h1>
+        <br>
+        <h1><center>지원서는 0월 0일 0시까지 수정하실 수 있으며,
+            <br> 그 이후에는 제출이 불가합니다.</center></h1>
+        
+        <br>
+    </div>
+    </div>
+
+
+</body>
+
+<style>
+    #text {
+        padding:10%;
+    }
+  #main{
+      color: white;
+    margin-top: 10%;
+    width: 100%;
+    height: 80%;
+    background-image: url("{% static 'main_img.png'%}");
+    background-repeat : no-repeat;
+        background-size : cover;
+  }
+  body{
+    overflow-y: scroll !important;
+    height:80% !important;
+
+  }
+</style>
+
+</html>
+
+
+
+

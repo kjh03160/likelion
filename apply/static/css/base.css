@@ -1,4 +1,3 @@
-@charset "utf-8";
 @font-face { font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); font-weight: normal; font-style: normal; }/* 초기화 */
 * {
   margin: 0;
@@ -14,8 +13,17 @@ a:hover, a:active { text-decoration: none; }
 html,body{
     background-color: black !important;
     height: 100vh;
+    
+    
+    
+    /* margin-left: 0.5%;
+    margin-right: 0.5%; */
 }
 
+main{
+  margin-bottom: 70px !important;
+
+}
 
 
 ::-webkit-scrollbar {
@@ -32,20 +40,29 @@ html,body{
 
   video {
     width: 80%;
-    height: 70%;
-    margin-left: 10%;
-    margin-top: 2%;
-    border-width: 2px;
-    border-color: coral;
-    border: 1px solid coral;
+    height: 90%;
+    margin-left: 14%;
+    margin-top: 4%;
+
+    /* border-width: 2px; */
+    /* border-color: coral;
+    border: 1px solid coral; */
 
 
 }
 
 nav {
-margin: 30px;
-
+  top:0;
+padding: 30px;
+padding-top: 25px !important;
+  font-size:medium;
 overflow: unset;
+/* width: 884.800px !important; */
+position: fixed;
+background-color: black;
+width: 100% !important;
+z-index: 11;
+height: 70px;
 }
 
 ul {
@@ -54,6 +71,10 @@ list-style-type: none;
 }
 
 li {
+    
+font-family: 'GmarketSansMedium';
+    color: white;
+font: 25px/1 !important;
 height: 25px;
 float: left;
 margin-right: 0px;
@@ -65,10 +86,10 @@ li:last-child {
 border-right: none;
 }
 
-li a {
+li a{
 text-decoration: none;
 color: white;
-font: 25px/1;
+font: 25px/1 !important;
 font-family: 'GmarketSansMedium';
 
 -webkit-transition: all 0.5s ease;

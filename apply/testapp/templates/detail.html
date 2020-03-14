@@ -6,7 +6,9 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>Time List</title>
+            <link rel="shortcut icon" type="image/x-icon" href="{% static 'like.jpg'%}">
+
+            <title>지원 현황</title>
         
         
         
@@ -79,7 +81,9 @@
             height: 100%;
         }
         section{
-          margin: 50px;
+          margin: 100px;
+          /* margin-top: 18% !important; */
+          /* margin-top: 400px; */
           height: 80%;
         }
         
@@ -159,19 +163,26 @@
         <body>
 
 
-            <nav>
-                <ul>
-                  <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
-                  {% if user.is_authenticated %}
-                  <li><a href="{%url 'logout'%}">Logout</a></li>
-                  <li><a href="{% url 'create' %}">Apply</a></li>
-            
-                  {% else %}
-                  <li><a href="{%url 'login'%}">Login</a></li>
-                  {%endif%}
-                  <li >문의사항 : kis03160@likelion.org</li>
-                </ul>
-              </nav>
+    
+          <nav style="height: initial !important;">
+            <ul>
+              <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
+              {% if user.is_authenticated %}
+              <li><a href="{%url 'logout'%}">Logout</a></li>
+              <li><a href="{% url 'create' %}">Apply</a></li>
+              <li><a href="{% url 'profile' %}">Profile</a></li>
+        
+        
+              {% else %}
+              <li><a href="{%url 'login'%}">Login</a></li>
+              {%endif%}
+              <li >오류 및 문의사항 : kis03160@likelion.org</li>
+              {% if user.is_staff %}
+              <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">운영진</a></li>
+              {%endif%}
+            </ul>
+          </nav>
+        
                 <section>
                         <!--for demo wrap-->
                         <div class="tbl-header">

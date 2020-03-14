@@ -56,15 +56,13 @@
 
 </head>
 <body>
-     
-    <nav style="height: initial !important;">
+    
+    <nav>
         <ul>
           <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
           {% if user.is_authenticated %}
           <li><a href="{%url 'logout'%}">Logout</a></li>
           <li><a href="{% url 'create' %}">Apply</a></li>
-          <li><a href="{% url 'profile' %}">Profile</a></li>
-    
     
           {% else %}
           <li><a href="{%url 'login'%}">Login</a></li>
@@ -75,7 +73,6 @@
           {%endif%}
         </ul>
       </nav>
-    
 
 <div id="back">
 
@@ -93,38 +90,46 @@
 				<img class="profile-img" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t31.0-8/p960x960/16700336_1409094205782038_5866806659717364072_o.png?_nc_cat=105&_nc_sid=85a577&_nc_ohc=cBaMTjJ5DYQAX_XQT1W&_nc_ht=scontent-ssn1-1.xx&oh=9e7d2e79c9c1d6e89304b903db714927&oe=5E901E2B" alt="">
                 
                 
-<form class="form-signin" method="POST" action="{%url 'signup'%}">
+<form class="form-signin" method="POST" action="{%url 'profile'%}">
     {% csrf_token %}
 
-    <input type="text" name="username" class="form-control" placeholder="학번(ex:202012345)" required autofocus>
-        <input type="password" name="password" class="form-control" placeholder="비밀번호" required>
-        <input type="password" name="password2" class="form-control" placeholder="비밀번호 확인" required>
-        <input type="text" name="name" class="form-control" placeholder="이름"" required autofocus>
+    <input type="text" name="username" class="form-control" placeholder="학번(ex:202012345)" value="{{user1.user.username}}" disabled required autofocus />
+        <input type="password" name="password" class="form-control" placeholder="비밀번호" required />
+        <input type="password" name="password2" class="form-control" placeholder="비밀번호 확인" required />
+        <input type="text" name="name" class="form-control" placeholder="이름" value="{{user1.name}}" required autofocus />
 
-
-            <input type="radio" id="r1" name="gender" value="M" required />
+            {% if user1.gender == "M" %}
+            <input type="radio" id="r1" name="gender" value="M"  checked="checked" required />
             <label for="r1"><span></span>남</label>
             <input type="radio" id="r2" name="gender" value="F" required />
             <label for="r2"><span></span>여</label>
+
+            {% else %}
+            <input type="radio" id="r1" name="gender" value="M"  required />
+            <label for="r1"><span></span>남</label>
+            <input type="radio" id="r2" name="gender" value="F" checked="checked" required />
+            <label for="r2"><span></span>여</label>
+
+            {%endif%}
             <!-- <input type="radio"   id="r1" />
             <label for="gender"><span></span>남</label>
             <p>
             <input type="radio" name="gender"  id="r2" />
             <label for="gender"><span></span>여</label> -->
 
-        <input type="text" name="major" class="form-control" placeholder="전공" required autofocus>
+        <input type="text" name="major" class="form-control" placeholder="전공" value="{{user1.major}}" required autofocus />
 
 
             
 
-                <input type="text" name="phone" class="form-control" placeholder="핸드폰 번호(-제외)" required autofocus>
+                <input type="text" name="phone" class="form-control" placeholder="핸드폰 번호(-제외)" value="{{user1.phone}}" required autofocus />
 
-                    <input type="text" name="email" class="form-control" placeholder="이메일" required autofocus>
+                    <input type="text" name="email" class="form-control" placeholder="이메일" value="{{user1.user.email}}" required autofocus />
 
 
         
 					<button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
-						Sign Up
+						수정 완료
 					</button>
 				</form>
                 

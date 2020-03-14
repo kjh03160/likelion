@@ -1,11 +1,17 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'like.jpg'%}">
+    <link rel="Stylesheet" type="text/css" href="/static/css/base.css">
+
+    <title>지원서({{q.signup.name}})</title>
     <style>
+      body{
+        color: white;
+      }
         /* CSS design by @jofpin */
 @import url(https://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
 @import url(http://weloveiconfonts.com/api/?family=entypo);
@@ -24,6 +30,8 @@
 }
 
 .user-profile {
+  padding: 10px;
+  margin-top: 8% !important;
   margin: auto;
 	width: 25em; 
   height: 11em;
@@ -34,7 +42,7 @@
 .user-profile  .username {
   margin: auto;
   margin-top: -4.40em;
-  margin-left: 5.80em;
+  margin-left: 4.6em;
   color: #658585;
   font-size: 1.53em;
   font-family: "Coda", sans-serif;
@@ -43,14 +51,14 @@
 .user-profile  .bio {
   margin: auto;
   display: inline-block;
-  margin-left: 10.43em;
+  margin-left: 8.5em;
   color: #e76043; 
   font-size: .87em;
   font-family: "varela round", sans-serif;
 }
 .user-profile > .description {
   margin: auto;
-  margin-top: 1.35em;
+  margin-top: 1em;
   margin-right: 4.43em;
   width: 14em;
   color: #c0c5c5; 
@@ -93,8 +101,100 @@
 }
 
     </style>
+
+
+<link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+
+
+<style>
+  body{
+    color :white !important;
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+    margin-left:15%;
+    padding-left: 5%;
+    padding-top: 2%;
+    font-family: 'Cafe24Ohsquare';
+    padding-bottom: 4%;
+  }
+  textarea{
+    background-color: gainsboro !important;
+    padding: 10px !important;
+    font-family: 'Cafe24Ohsquare';
+    border-radius: 5px;
+
+  }
+  h4, h5 {
+    font-size: 15px !important;
+    margin-bottom: 6px !important;
+    letter-spacing: 2px !important;
+    white-space: nowrap;
+  }
+  button {
+    width: 20% !important;
+    background-color: orange !important;
+    border-color: orange !important;
+    /* margin-top: 3% !important; */
+    float: right !important;
+    position: absolute !important;
+    left: 45%;
+    margin-bottom: 1% !important ;
+    
+  }
+  nav{
+    font: 25px/1 !important;
+    font-size:medium;
+
+  }
+  #right{
+    width: 39%;
+    float: right !important; 
+  display:block;
+  position: relative;
+  border-right: ivory;
+  border-width: 10px;
+  margin-top: 5%;
+    }
+  img{
+    width: 80%;
+    height: 80%;
+    margin-left: 13%;
+    margin-bottom: 1%;
+    
+  }
+  #pf{
+    font-size:xx-large
+  }
+
+  @font-face { font-family: 'Cafe24Ohsquare'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff'); font-weight: normal; font-style: normal; }
+</style>
 </head>
 <body>
+
+
+    
+  <nav style="height: initial !important;">
+    <ul>
+      <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="{%url 'logout'%}">Logout</a></li>
+      <li><a href="{% url 'create' %}">Apply</a></li>
+      <li><a href="{% url 'profile' %}">Profile</a></li>
+
+
+      {% else %}
+      <li><a href="{%url 'login'%}">Login</a></li>
+      {%endif%}
+      <li >오류 및 문의사항 : kis03160@likelion.org</li>
+      {% if user.is_staff %}
+      <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">운영진</a></li>
+      {%endif%}
+    </ul>
+  </nav>
+
     
 <div class="user-profile">
 	<img class="avatar" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t31.0-8/p960x960/16700336_1409094205782038_5866806659717364072_o.png?_nc_cat=105&_nc_sid=85a577&_nc_ohc=cBaMTjJ5DYQAX_XQT1W&_nc_ht=scontent-ssn1-1.xx&oh=9e7d2e79c9c1d6e89304b903db714927&oe=5E901E2B" alt="Ash" />
@@ -102,67 +202,91 @@
   <div class="bio">
     {{q.signup.major}}
   </div>
-    <div class="description">
-      I use to design websites and applications
-      for the web.
+    <div class="description" style="color: black;">
+      성별 : {{q.signup.gender}}<br>
+      번호 : {{q.signup.phone}}<br>
+      이메일:{{q.user.email}}
   </div>
  
 </div>
 
 
-
-<form action="{% url 'assess' q.id %}" method="POST">
-{% csrf_token %}
-            <h4>1. 자기소개 및 지원동11111111기</h4>
-            <textarea rows="10" cols="100" name="q5" required disabled>{{q.q1}}</textarea>
-
+<main>
+  
+  <form action="{% url 'update' %}" method="POST">
+  {% csrf_token %}
+            <h4>1. 자기 소개와 지원 동기를 말씀해주세요</h4>
+            <textarea rows="10" cols="100" name="q1" required disabled>{{q.q1}}</textarea>
             <br>
             <br>
-
+  
             <h4>2. 마음이 끌리는 무언가에 몰입해 일정 수준의 결과물을 만들어낸 경험이 있나요?</h4>
-            <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요! 반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만, 어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
-            <textarea rows="10" cols="100" name="q5" required disabled>{{q.q2}}</textarea>
+            <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요!<br>
+               반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만,<br>
+               어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
+            <textarea rows="10" cols="100" name="q2" required disabled>{{q.q2}}</textarea>
             <br>
             <br>
-
-            <h4>3. 세번째 질문</h4>
-            <textarea rows="10" cols="100" name="q5" required disabled>{{q.q3}}</textarea>
+  
+            <h4>3. 본인이 만들어 보고 싶은 웹 서비스는 무엇인가요?</h4>
+            <textarea rows="10" cols="100" name="q3" required disabled>{{q.q3}}</textarea>
             <br>
             <br>
-
-          <h4>4. 네번째 문제</h4>
-          <textarea rows="10" cols="100" name="q5" required disabled>{{q.q4}}</textarea>
-          <br>
+  
+          <h4>4. 프로그래밍 경험이 있다면 사용 언어 및 기술 스택의 수준, 프로젝트 경험에 대해 말씀해주세요. 
+            <br>없다면 향후 공부 계획을 말씀해주시면 됩니다.</h4>
+            <textarea rows="10" cols="100" name="q4" required disabled>{{q.q4}}</textarea>
+            <br>
             <br>
         
-        <h4>5. 다섯번째 문제 (최대 1000자)</h4>
-        <textarea rows="10" cols="100" name="q5" required disabled>{{q.q5}}</textarea>
-        <br>
-            <br>
-
-          <h4>5. Codecademy 듣고 왔니?</h4>
-          {{q.codecademy}}
+        <h4>5. 주 1회 팀스터디를 진행하게 됩니다. 스터디를 하고 싶은 주제에 대해 자유롭게 적어주세요.
+          <br> 평가에 반영되지 않고 향후 팀 빌딩을 위한 것이니 편하게 말씀해주시면 됩니다. 
+        </h4>
+            <textarea rows="10" cols="100" name="q5" required disabled>{{q.q5}}</textarea>
             <br>
             <br>
+          <h4 style="float: left;">5. Codecademy 듣고 왔니?        {% if q.codecademy == "Y" %}
+            <input name="codecademy" type="radio" value="yes"  checked="checked" required />
+            <label for="codecademy">네</label>
+            <input name="codecademy" type="radio" value="no" required disabled/>
+            <label for="codecademy">아니오</label>
+        
+        {%else%}
+        <input name="codecademy" type="radio" value="yes" required disabled/>
+        <label for="codecademy">네</label>
+        <input name="codecademy" type="radio" value="no"  checked="checked" required />
+        <label for="codecademy">아니오</label>
+        
+         {%endif%}</h4>
+  
 
-            {% if not q.first_pf %}
-            <input name="first" type="radio" value="P" required/>
-            <label for="first">1차합격</label>
-            <input name="first" type="radio" value="F" required/>
-            <label for="first">불합격</label>
-            {% else %}
-            <input name="second" type="radio" value="P" required/>
-            <label for="second">최종합격</label>
-            <input name="second" type="radio" value="F" required/>
-            <label for="second">불합격</label>
-            {%endif%}
 
-    <input class="btn btn-dark" type="submit" value="제출하기">
-        <a href="{% url 'home' %}"> 홈으로 돌아가기 </a>
+         <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
+          저장
+        </button>
+         <br>
+         <br>
+         <div id="pf">
+         {% if not q.first_pf %}
+          <input id="first" name="first" type="radio" value="P" required/>
+          <label for="first">1차합격</label>
+          <input id="fn" name="first" type="radio" value="F" required/>
+          <label for="fn">불합격</label>
+         {% else %}
+         <input id = "second" name="second" type="radio" value="P" required/>
+         <label for="second"> 최종합격</label>
+         <input id = "n" name="second" type="radio" value="F" required/>
+         <label for="n"> 불합격</label>
+         {%endif%}
+        </div>
+        
+         
       </form>
-  </div>
 
-
+  
+  
+  
+  </main>
 
 
 

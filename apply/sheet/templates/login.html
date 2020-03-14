@@ -4,8 +4,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'like.jpg'%}">
+
+    <title>Login</title>
     <link rel="Stylesheet" type="text/css" href="/static/css/base.css">
 
 <style>
@@ -53,22 +55,26 @@
 </head>
 <body scroll='no'>
     
-	<nav>
+    
+	<nav style="height: initial !important;">
 		<ul>
 		  <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
 		  {% if user.is_authenticated %}
 		  <li><a href="{%url 'logout'%}">Logout</a></li>
 		  <li><a href="{% url 'create' %}">Apply</a></li>
+		  <li><a href="{% url 'profile' %}">Profile</a></li>
+	
 	
 		  {% else %}
 		  <li><a href="{%url 'login'%}">Login</a></li>
 		  {%endif%}
-		  <li >문의사항 : kis03160@likelion.org</li>
+          <li >오류 및 문의사항 : kis03160@likelion.org</li>
 		  {% if user.is_staff %}
-		  <li style="float: right;"><a href="{% url 'view' %}">운영진</a></li>
+		  <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">운영진</a></li>
 		  {%endif%}
 		</ul>
 	  </nav>
+	
 <div id="back">
 
 <div id="right">
@@ -254,6 +260,11 @@
 .sign-in{
   margin-bottom:20px;
 }
+nav{
+      font: 25px/1 !important;
+      font-size:medium;
+
+    }
 </style>
 
 <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">

@@ -30,5 +30,6 @@ urlpatterns = [
     path('view/', view, name='view'),
     path('detail/<int:pk>', lookup, name='lookup'),
     path('eval/<int:pk>', assess, name='assess'),
+    path('profile/', profile, name='profile'),
 
 ]
