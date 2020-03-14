@@ -66,7 +66,7 @@ def profile(request):
         if request.method == "POST":
             if request.POST["password"] != request.POST["password2"]:
                 return render(request, 'profile.html', {'error':'비밀번호가 일치하지 않습니다' , 'user1' : user1})
-            user1.user.password = request.POST['password']
+            user1.user.set_password(request.POST['password'])
             user1.user.email = request.POST['email']
             user1.name = request.POST["name"]
             user1.phone = request.POST["phone"]
@@ -74,7 +74,8 @@ def profile(request):
             user1.major = request.POST["major"]
             user1.user.save()
             user1.save()
-            return redirect('/')
+            auth.login(request, user1.user)
+            return redirect('home')
         
         else:
             return render(request, 'profile.html', {'user1' : user1})
