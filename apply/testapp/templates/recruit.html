@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIKELION X HUFS</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'like.jpg'%}">
+<link rel="Stylesheet" type="text/css" href="/static/css/base.css">
+</head>
+<body style="height: 89% !important;">
+
+    
+  <nav style="height: initial !important;">
+    <ul>
+      <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="{%url 'logout'%}">Logout</a></li>
+      <li><a href="{% url 'create' %}">Apply</a></li>
+      <li><a href="{% url 'profile' %}">Profile</a></li>
+
+
+      {% else %}
+      <li><a href="{%url 'login'%}">Login</a></li>
+      {%endif%}
+      <li >오류 및 문의사항 : kis03160@likelion.org</li>
+      {% if user.is_staff %}
+      <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">운영진</a></li>
+      {%endif%}
+    </ul>
+  </nav>
+
+
+
+</body>
+</html>
