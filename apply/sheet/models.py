@@ -10,7 +10,7 @@ class Signup(models.Model):
         ('M','male'),
     )
     name = models.CharField(max_length=100, null=False)
-    phone = models.IntegerField()
+    phone = models.CharField(max_length=100)
     gender = models.CharField(max_length=1,choices = GENDER)
     major = models.CharField(max_length=200, null=False)
     def __str__(self):

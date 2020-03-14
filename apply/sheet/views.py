@@ -72,6 +72,7 @@ def profile(request):
             user1.phone = request.POST["phone"]
             user1.gender = request.POST["gender"]
             user1.major = request.POST["major"]
+            user1.user.save()
             user1.save()
             return redirect('/')
         
