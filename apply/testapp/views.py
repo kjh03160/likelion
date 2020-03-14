@@ -80,3 +80,7 @@ def assess(request, pk):
     else:
         return render(request, 'alert.html')
 
+
+def recruit(request):
+    return render(request, 'recruit.html')
+
