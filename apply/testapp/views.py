@@ -18,6 +18,7 @@ def update(request):
         objs.q4 = request.POST['q4']
         objs.q5 = request.POST['q5']
         objs.codecademy = request.POST['codecademy']
+
         objs.save()  
         return render(request, 'complete.html') #추후에 complete로 바꿀것
 
@@ -42,6 +43,7 @@ def create(request):
         apply.q4 = request.POST['q4']
         apply.q5 = request.POST['q5']
         apply.codecademy = request.POST['codecademy']
+        print(request.POST['codecademy'])
         apply.user = request.user
         apply.signup = Signup.objects.get(user=request.user)
         apply.save()
