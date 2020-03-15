@@ -9,7 +9,14 @@ a:hover { text-decoration: none; }
 a:focus { text-decoration: none; }
 a:hover, a:active { text-decoration: none; } 
 
+#hh {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  font-family: 'GmarketSansMedium';
 
+}
 html,body{
     background-color: black !important;
     height: 100vh;
@@ -37,6 +44,8 @@ main{
     border-radius: 8px;
     /* background-color: #34558b; */
   }
+
+
 
   video {
     width: 80%;

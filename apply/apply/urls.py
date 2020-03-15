@@ -20,7 +20,8 @@ from testapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'),
+    path('', home, name='caution'),
+    path('main/', main, name='home'),
     path('signup/', signup_page, name='signup'),
     path('apply/', create, name="create"),
     path('update/', update, name="update"),

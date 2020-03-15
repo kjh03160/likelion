@@ -32,6 +32,8 @@ def create(request):
     objs = Apply.objects.filter(user = request.user)
     if len(objs):
         return redirect('update')
+            # result = datetime.datetime.strptime(day,"%b %d, %Y %H:%M %p")
+            # now = datetime.datetime.now()
     if request.method == "POST":
         apply = Apply()
         apply.q1 = request.POST['q1']

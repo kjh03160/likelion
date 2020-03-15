@@ -6,10 +6,10 @@ from django import forms
 from .models import Signup
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'homealert.html')
 
-# def login(request):
-#     return render(request, 'login.html')
+def main(request):
+    return render(request, 'index.html')
 
 def signup_page(request):
     if request.method == "POST":
@@ -57,7 +57,7 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('/')
+    return redirect('home')
 
 
 def profile(request):
