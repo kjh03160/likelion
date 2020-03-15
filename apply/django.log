@@ -1,0 +1,39 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Mar 15 17:07:54 2020] ***
+compiled with version: 7.5.0 on 15 March 2020 15:43:04
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-47-134
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/www/likelion/apply
+writing pidfile to /tmp/project-master.pid
+detected binary path: /home/ubuntu/www/likelion/myvenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/likelion/apply
+chdir(): No such file or directory [core/uwsgi.c line 2623]
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Mar 15 17:13:01 2020] ***
+compiled with version: 7.5.0 on 15 March 2020 15:43:04
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-47-134
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/www/likelion/apply
+writing pidfile to /tmp/project-master.pid
+detected binary path: /home/ubuntu/www/likelion/myvenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/likelion/apply
+chdir(): No such file or directory [core/uwsgi.c line 2623]
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Mar 15 17:34:59 2020] ***
+compiled with version: 7.5.0 on 15 March 2020 15:43:04
+os: Linux-4.15.0-1057-aws #59-Ubuntu SMP Wed Dec 4 10:02:00 UTC 2019
+nodename: ip-172-31-47-134
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/www/likelion/apply
+writing pidfile to /tmp/project-master.pid
+detected binary path: /home/ubuntu/www/likelion/myvenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/likelion/apply
+chdir(): No such file or directory [core/uwsgi.c line 2623]
