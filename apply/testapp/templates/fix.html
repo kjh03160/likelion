@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>지원서 작성</title>
   <link rel="Stylesheet" type="text/css" href="/static/css/base.css">
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'like.jpg'%}">
+    <link rel="shortcut icon" type="image/x-icon" href="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/53319997_2288407134771022_3834362680915787776_n.png?_nc_cat=103&_nc_sid=85a577&_nc_ohc=BPHviMZanPwAX-UuduT&_nc_ht=scontent-gmp1-1.xx&oh=f89cea23cbd58cb6ba95ade7eec0670c&oe=5E954E5A">
 
 
   <style>
@@ -47,7 +47,7 @@
       position: absolute !important;
       left: 45%;
       margin-bottom: 1% !important ;
-      
+
     }
     nav{
       font: 25px/1 !important;
@@ -56,7 +56,7 @@
     }
     #right{
       width: 39%;
-      float: right !important; 
+      float: right !important;
     display:block;
     position: relative;
     border-right: ivory;
@@ -68,7 +68,7 @@
       height: 80%;
       margin-left: 13%;
       margin-bottom: 1%;
-      
+
     }
 
     @font-face { font-family: 'Cafe24Ohsquare'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff'); font-weight: normal; font-style: normal; }
@@ -77,16 +77,14 @@
 
 </head>
 <body>
- 
 
-    
+
+
   <nav style="height: initial !important;">
     <ul>
       <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
       {% if user.is_authenticated %}
       <li><a href="{%url 'logout'%}">Logout</a></li>
-      <li><a href="{% url 'recruit' %}">모집요강</a></li>
-
       <li><a href="{% url 'create' %}">Apply</a></li>
       <li><a href="{% url 'profile' %}">Profile</a></li>
 
@@ -104,105 +102,105 @@
 
 
 <main>
-{% if q %}
+{% if q %}-->
 
 <form action="{% url 'update' %}" method="POST">
 {% csrf_token %}
-          <h4>1. 자기 소개와 지원 동기를 말씀해주세요</h4>
-          <textarea rows="10" cols="100" name="q1" required>{{q.q1}}</textarea>
-          <br>
-          <br>
+         <h4>1. 자기 소개와 지원 동기를 말씀해주세요</h4>
+         <textarea rows="10" cols="100" name="q1" required>{{q.q1}}</textarea>
+         <br>
+         <br>
 
-          <h4>2. 마음이 끌리는 무언가에 몰입해 일정 수준의 결과물을 만들어낸 경험이 있나요?</h4>
-          <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요!<br>
-             반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만,<br>
-             어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
-          <textarea rows="10" cols="100" name="q2" required>{{q.q2}}</textarea>
-          <br>
-          <br>
+         <h4>2. 마음이 끌리는 무언가에 몰입해 일정 수준의 결과물을 만들어낸 경험이 있나요?</h4>
+         <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요! <br>
+            반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만,<br>
+            어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
+         <textarea rows="10" cols="100" name="q2" required>{{q.q2}}</textarea>
+         <br>
+         <br>
 
-          <h4>3. 본인이 만들어 보고 싶은 웹 서비스는 무엇인가요?</h4>
-          <textarea rows="10" cols="100" name="q3" required>{{q.q3}}</textarea>
-          <br>
-          <br>
+         <h4>3. 본인이 만들어 보고 싶은 웹 서비스는 무엇인가요?</h4>
+         <textarea rows="10" cols="100" name="q3" required>{{q.q3}}</textarea>
+         <br>
+         <br>
 
-        <h4>4. 프로그래밍 경험이 있다면 사용 언어 및 기술 스택의 수준, 프로젝트 경험에 대해 말씀해주세요. 
-          <br>없다면 향후 공부 계획을 말씀해주시면 됩니다.</h4>
-          <textarea rows="10" cols="100" name="q4" required>{{q.q4}}</textarea>
-          <br>
-          <br>
-      
-      <h4>5. 주 1회 팀스터디를 진행하게 됩니다. 스터디를 하고 싶은 주제에 대해 자유롭게 적어주세요.
-        <br> 평가에 반영되지 않고 향후 팀 빌딩을 위한 것이니 편하게 말씀해주시면 됩니다. 
-      </h4>
-          <textarea rows="10" cols="100" name="q5" required>{{q.q5}}</textarea>
-          <br>
-          <br>
+       <h4>4. 프로그래밍 경험이 있다면 사용 언어 및 기술 스택의 수준, 프로젝트 경험에 대해 말씀해주세요.
+         <br>없다면 향후 공부 계획을 말씀해주시면 됩니다.</h4>
+         <textarea rows="10" cols="100" name="q4" required>{{q.q4}}</textarea>
+         <br>
+         <br>
 
-        <h4 style="float: left;">6. Codecademy HTML Chapter1 수강하셨습니까?       {% if q.codecademy == "Y" %}
-          <input name="codecademy" type="radio" value="yes"  checked="checked" required/>
-          <label for="codecademy">네</label>
-          <input name="codecademy" type="radio" value="no" required/>
-          <label for="codecademy">아니오</label>
-      
-      {%else%}
-      <input name="codecademy" type="radio" value="yes" required/>
-      <label for="codecademy">네</label>
-      <input name="codecademy" type="radio" value="no"  checked="checked" required/>
-      <label for="codecademy">아니오</label>
-      
-       {%endif%}</h4>
+     <h4>5. 주 1회 팀스터디를 진행하게 됩니다. 스터디를 하고 싶은 주제에 대해 자유롭게 적어주세요.
+       <br> 평가에 반영되지 않고 향후 팀 빌딩을 위한 것이니 편하게 말씀해주시면 됩니다.
+     </h4>
+         <textarea rows="10" cols="100" name="q5" required>{{q.q5}}</textarea>
+         <br>
+         <br>
 
-       <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
-        저장
-      </button>
-       
-    </form>
+       <h4 style="float: left;">5. Codecademy HTML Chapter1 수강하셨습니까?        {% if q.codecademy == "Y" %}
+         <input name="codecademy" type="radio" value="yes"  checked="checked" required/>
+         <label for="codecademy">네</label>
+         <input name="codecademy" type="radio" value="no" required/>
+         <label for="codecademy">아니오</label>
+
+     {%else%}
+     <input name="codecademy" type="radio" value="yes" required/>
+     <label for="codecademy">네</label>
+     <input name="codecademy" type="radio" value="no"  checked="checked" required/>
+     <label for="codecademy">아니오</label>
+
+      {%endif%}</h4>
+
+      <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
+       저장
+     </button>
+
+   </form>
 {% else %}
 
 <form action="{% url 'create' %}" method="POST">
-  {% csrf_token %}
+ {% csrf_token %}
 
-  <h4>1. 자기 소개와 지원 동기를 말씀해주세요</h4>
-  <textarea rows="10" cols="100" name="q1" required></textarea>
-  <br>
-  <br>
+         <h4>1. 자기 소개와 지원 동기를 말씀해주세요</h4>
+ <textarea rows="10" cols="100" name="q1" required></textarea>
+ <br>
+ <br>
 
-  <h4>2. 마음이 끌리는 무언가에 몰입해 일정 수준의 결과물을 만들어낸 경험이 있나요?</h4>
-  <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요!<br>
-     반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만,<br>
-     어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
-  <textarea rows="10" cols="100" name="q2" required></textarea>
-  <br>
-  <br>
+ <h4>2. 마음이 끌리는 무언가에 몰입해 일정 수준의 결과물을 만들어낸 경험이 있나요?</h4>
+         <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요! <br>
+            반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만,<br>
+            어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
+ <textarea rows="10" cols="100" name="q2" required></textarea>
+ <br>
+ <br>
 
-  <h4>3. 본인이 만들어 보고 싶은 웹 서비스는 무엇인가요?</h4>
-  <textarea rows="10" cols="100" name="q3" required></textarea>
-  <br>
-  <br>
+         <h4>3. 본인이 만들어 보고 싶은 웹 서비스는 무엇인가요?</h4>
+ <textarea rows="10" cols="100" name="q3" required></textarea>
+ <br>
+ <br>
 
-  <h4>4. 프로그래밍 경험이 있다면 사용 언어 및 기술 스택의 수준, 프로젝트 경험에 대해 말씀해주세요. 
-    <br>없다면 향후 공부 계획을 말씀해주시면 됩니다.</h4>
-  <textarea rows="10" cols="100" name="q4" required></textarea>
-  <br>
-  <br>
+       <h4>4. 프로그래밍 경험이 있다면 사용 언어 및 기술 스택의 수준, 프로젝트 경험에 대해 말씀해주세요.
+         <br>없다면 향후 공부 계획을 말씀해주시면 됩니다.</h4>
+ <textarea rows="10" cols="100" name="q4" required></textarea>
+ <br>
+ <br>
 
-  <h4>5. 주 1회 팀스터디를 진행하게 됩니다. 스터디를 하고 싶은 주제에 대해 자유롭게 적어주세요.
-    <br> 평가에 반영되지 않고 향후 팀 빌딩을 위한 것이니 편하게 말씀해주시면 됩니다. 
-  </h4>
-  <textarea rows="10" cols="100" name="q5" required>{{q.q5}}</textarea>
-  <br>
-  <br>
+     <h4>5. 주 1회 팀스터디를 진행하게 됩니다. 스터디를 하고 싶은 주제에 대해 자유롭게 적어주세요.
+       <br> 평가에 반영되지 않고 향후 팀 빌딩을 위한 것이니 편하게 말씀해주시면 됩니다.
+     </h4>
+ <textarea rows="10" cols="100" name="q5" required>{{q.q5}}</textarea>
+ <br>
+ <br>
 
-<h4>6. Codecademy HTML Chapter1 수강하셨습니까?</h4>
+<h4 style="float: left; margin-right: 2%;" >5. Codecademy HTML Chapter1 수강하셨습니까?</h4>
 
 <input name="codecademy" type="radio" value="yes" required/>
 <label for="codecademy">네</label>
 <input name="codecademy" type="radio" value="no" required/>
 <label for="codecademy">아니오</label>
-  <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
-    저장
-  </button>
+<button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
+  저장
+ </button>
 </form>
 {%endif%}
 
@@ -218,7 +216,7 @@
   <div style="float: inline-end;">
 
     <img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/68769010_2567274199964027_7744706863760932864_o.jpg?_nc_cat=100&_nc_sid=e007fa&_nc_ohc=CK4OBdEGVX0AX-g8cLh&_nc_ht=scontent-ssn1-1.xx&oh=773b3b961bcdbf939c7fe5541e56845b&oe=5E936ADD">
-    
+
     </div>
 <div id="second" style="float: inline-end;">
 </div>

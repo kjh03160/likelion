@@ -47,7 +47,6 @@ def create(request):
         apply.save()
         return render(request, 'complete.html') #추후에 complete로 바꿀것
     else:
-        print(22222222222222) #test
         # 그냥 맨 처음 들어올때
         return render(request, 'fix.html', {'q' : objs})
 
