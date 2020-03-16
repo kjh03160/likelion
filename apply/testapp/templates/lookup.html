@@ -269,12 +269,12 @@
          <h4>7. 면접 온/오프라인 여부   
    
            {% if q.interview == "on"  %}
-           <select style="margin-left: 2%;" name="interview">
+           <select style="margin-left: 2%;" name="interview" disabled>
            <option value="on" selected>온라인</option>
            <option value="off">오프라인</option>
          </select>
          {%else%}
-         <select style="margin-left: 2%;" name="interview">
+         <select style="margin-left: 2%;" name="interview" disabled>
            <option value="on" >온라인</option>
            <option value="off" selected>오프라인</option>
          </select> </h4>
