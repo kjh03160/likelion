@@ -745,3 +745,15 @@ TimeoutError: [Errno 110] Connection timed out
 [16/Mar/2020 16:41:18] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
 [16/Mar/2020 16:42:24] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
 [16/Mar/2020 16:43:34] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
+/home/ubuntu/www/likelion/apply/testapp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): testapp.
+Run 'python manage.py migrate' to apply them.
+March 16, 2020 - 16:03:08
+Django version 3.0.4, using settings 'apply.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
