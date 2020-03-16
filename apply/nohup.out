@@ -757,3 +757,22 @@ Django version 3.0.4, using settings 'apply.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 Watching for file changes with StatReloader
+[16/Mar/2020 16:45:02] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
+[16/Mar/2020 16:45:13] "GET / HTTP/1.1" 200 97
+[16/Mar/2020 16:45:14] "GET /main/ HTTP/1.1" 200 2276
+[16/Mar/2020 16:45:17] "GET /view/ HTTP/1.1" 200 7044
+[16/Mar/2020 16:45:17] "GET /static/pro.mp4 HTTP/1.1" 200 17395712
+[16/Mar/2020 16:45:18] "GET /detail/2 HTTP/1.1" 200 8403
+[16/Mar/2020 16:45:24] "POST /eval/2 HTTP/1.1" 302 0
+[16/Mar/2020 16:45:24] "GET /view/ HTTP/1.1" 200 7044
+[16/Mar/2020 16:46:10] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
+[16/Mar/2020 16:46:42] "GET /view/ HTTP/1.1" 200 7044
+[16/Mar/2020 16:46:43] "GET /detail/2 HTTP/1.1" 200 8418
+[16/Mar/2020 16:46:49] "GET /admin/ HTTP/1.1" 200 7053
+[16/Mar/2020 16:46:50] "GET /admin/ HTTP/1.1" 200 7053
+[16/Mar/2020 16:46:52] "GET /admin/testapp/apply/ HTTP/1.1" 200 4436
+[16/Mar/2020 16:46:52] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[16/Mar/2020 16:46:54] "POST /admin/testapp/apply/ HTTP/1.1" 200 3407
+[16/Mar/2020 16:46:55] "POST /admin/testapp/apply/ HTTP/1.1" 302 0
+[16/Mar/2020 16:46:55] "GET /admin/testapp/apply/ HTTP/1.1" 200 3350
+[16/Mar/2020 16:46:55] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
