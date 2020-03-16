@@ -108,6 +108,13 @@ def assess(request, pk):
         return render(request, 'alert.html')
 
 
+def user_list(request):
+    if request.user.is_staff:
+        users = Signup.objects.all()
+        return render(request, 'users.html', {'users' : users})
+    else:
+        return render(request, 'alert.html')
+
 def recruit(request):
     return render(request, 'recruit.html')
 

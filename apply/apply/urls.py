@@ -32,6 +32,7 @@ urlpatterns = [
     path('detail/<int:pk>', lookup, name='lookup'),
     path('eval/<int:pk>', assess, name='assess'),
     path('profile/', profile, name='profile'),
-    path('recruit/', recruit, name='recruit')
+    path('recruit/', recruit, name='recruit'),
+    path('users/', user_list, name='users')
 
 ]
