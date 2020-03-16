@@ -24,6 +24,7 @@
       font-family: 'Cafe24Ohsquare';
       padding-bottom: 4%;
       float: left;
+      margin-top: 5%;
     }
     textarea{
       background-color: gainsboro !important;
@@ -46,7 +47,7 @@
       float: right !important;
       position: absolute !important;
       left: 45%;
-      margin-bottom: 1% !important ;
+      margin-bottom: 3% !important ;
 
     }
     nav{
@@ -103,8 +104,7 @@
 
 
 
-<main>
-{% if q %}-->
+{% if q %}
 
 <form action="{% url 'update' %}" method="POST">
 {% csrf_token %}
@@ -138,19 +138,36 @@
          <textarea rows="10" cols="100" name="q5" required>{{q.q5}}</textarea>
          <br>
          <br>
-       <h4 style="float: left;">5. Codecademy HTML Chapter1 수강하셨습니까?        {% if q.codecademy == "yes"  %}
-         <input name="codecademy" type="radio" value="yes"  checked="checked" required/>
+       <h4 style="float: left;">6. Codecademy HTML Chapter1 수강하셨습니까? </h4>       {% if q.codecademy == "yes"  %}
+         <input name="codecademy" type="radio" value="yes"  checked="checked" style="margin-left: 2%;" required/>
          <label for="codecademy">네</label>
-         <input name="codecademy" type="radio" value="no" required/>
+         <input name="codecademy" type="radio" value="no" style="margin-left: 2%;" required/>
          <label for="codecademy">아니오</label>
 
      {%else%}
-     <input name="codecademy" type="radio" value="yes" required/>
+     <input name="codecademy" type="radio" value="yes" style="margin-left: 2%;" required/>
      <label for="codecademy">네</label>
-     <input name="codecademy" type="radio" value="no"  checked="checked" required/>
+     <input name="codecademy" type="radio" value="no" style="margin-left: 2%;" checked="checked" required/>
      <label for="codecademy">아니오</label>
 
-      {%endif%}</h4>
+      {%endif%}
+      <br>
+      <h4 style="text-align: left;">7. 면접 온/오프라인 여부   
+
+        {% if q.interview == "on"  %}
+        <select style="margin-left: 2%;" name="interview">
+        <option value="on" selected>온라인</option>
+        <option value="off">오프라인</option>
+      </select>
+      {%else%}
+      <select style="margin-left: 2%;" name="interview">
+        <option value="on" >온라인</option>
+        <option value="off" selected>오프라인</option>
+      </select> </h4>
+      {%endif%}
+
+
+
 
       <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
        저장
@@ -193,12 +210,19 @@
  <br>
  <br>
 
-<h4 style="float: left; margin-right: 2%;" >5. Codecademy HTML Chapter1 수강하셨습니까?</h4>
+<h4 style="float: left;" >6. Codecademy HTML Chapter1 수강하셨습니까?</h4>
 
-<input name="codecademy" type="radio" value="yes" required/>
-<label for="codecademy">네</label>
-<input name="codecademy" type="radio" value="no" required/>
-<label for="codecademy">아니오</label>
+<input name="codecademy" type="radio" value="yes" style="margin-left: 2%;" required/>
+     <label for="codecademy">네</label>
+     <input name="codecademy" type="radio" value="no" style="margin-left: 2%;" required/>
+     <label for="codecademy">아니오</label>
+<br>
+<h4 >7. 면접 온/오프라인 여부<select style="margin-left: 2%;" name="interview">
+  <option value="on">온라인</option>
+  <option value="off">오프라인</option>
+</select></h4>
+
+
 <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
   저장
  </button>
@@ -235,7 +259,6 @@
 
 </div>
 
-</main>
 </body>
 
 {% else %}

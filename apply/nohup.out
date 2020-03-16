@@ -498,3 +498,17 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [16/Mar/2020 15:58:41] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
 [16/Mar/2020 15:59:46] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
 [16/Mar/2020 16:00:59] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
+[16/Mar/2020 16:02:13] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
+/home/ubuntu/www/likelion/apply/testapp/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 16, 2020 - 03:54:12
+Django version 3.0.4, using settings 'apply.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+12
+12
+Watching for file changes with StatReloader
+[16/Mar/2020 16:03:43] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
+[16/Mar/2020 16:04:55] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
