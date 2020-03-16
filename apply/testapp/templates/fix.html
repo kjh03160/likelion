@@ -152,21 +152,18 @@
 
       {%endif%}
       <br>
-      <h4 style="text-align: left;">7. 면접 온/오프라인 여부   
-
-        {% if q.interview == "on"  %}
+      <h4 >7. 면접 온/오프라인 여부
+        {% if q.interview == "on" %}
         <select style="margin-left: 2%;" name="interview">
         <option value="on" selected>온라인</option>
         <option value="off">오프라인</option>
-      </select>
+      </select></h4>
       {%else%}
       <select style="margin-left: 2%;" name="interview">
         <option value="on" >온라인</option>
-        <option value="off" selected>오프라인</option>
-      </select> </h4>
+        <option value="off"selected>오프라인</option>
+      </select></h4>
       {%endif%}
-
-
 
 
       <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
