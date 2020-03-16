@@ -216,10 +216,13 @@
 
 <main>
   
-  <form action="{% url 'update' %}" method="POST">
+  <form action="{% url 'assess' q.id %}" method="POST">
   {% csrf_token %}
             <h4>1. 자기 소개와 지원 동기를 말씀해주세요</h4>
+            <!-- <textarea rows="10" cols="100" name="q1" required disabled>{{q.q1}}</textarea> -->
             <textarea rows="10" cols="100" name="q1" required disabled>{{q.q1}}</textarea>
+            <!-- <p style="background-color: gainsboro; width: 63%; border-radius: 3px; padding: 1%; word-break: break-all;">{{q.q1}}</p> -->
+
             <br>
             <br>
   
@@ -227,7 +230,8 @@
             <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요!<br>
                반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만,<br>
                어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
-            <textarea rows="10" cols="100" name="q2" required disabled>{{q.q2}}</textarea>
+               <textarea rows="10" cols="100" name="q2" required disabled>{{q.q2}}</textarea>
+            <!-- <p style="background-color: gainsboro; width: 63%; border-radius: 3px; padding: 1%; word-break: break-all;">{{q.q1}}</p> -->
             <br>
             <br>
   
@@ -248,7 +252,7 @@
             <textarea rows="10" cols="100" name="q5" required disabled>{{q.q5}}</textarea>
             <br>
             <br>
-          <h4 style="float: left;">5. Codecademy 듣고 왔니?        {% if q.codecademy == "yes" %}
+          <h4 style="float: left;">6. Codecademy 듣고 왔니? </h4>       {% if q.codecademy == "yes" %}
             <input name="codecademy" type="radio" value="yes"  checked="checked" required />
             <label for="codecademy">네</label>
             <input name="codecademy" type="radio" value="no" required disabled/>
@@ -259,9 +263,22 @@
         <input name="codecademy" type="radio" value="no"  checked="checked" required />
         <label for="codecademy">아니오</label>
         
-         {%endif%}</h4>
+         {%endif%}
   
-
+         <br>
+         <h4>7. 면접 온/오프라인 여부   
+   
+           {% if q.interview == "on"  %}
+           <select style="margin-left: 2%;" name="interview">
+           <option value="on" selected>온라인</option>
+           <option value="off">오프라인</option>
+         </select>
+         {%else%}
+         <select style="margin-left: 2%;" name="interview">
+           <option value="on" >온라인</option>
+           <option value="off" selected>오프라인</option>
+         </select> </h4>
+         {%endif%}
 
          <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
           저장

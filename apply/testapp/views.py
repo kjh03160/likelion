@@ -2,14 +2,28 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from .models import *    
 from django.contrib.auth.decorators import login_required
+import datetime
+
+
+def manage(request):
+    if request.method == "POST":
+        objs = Apply.objects.filter(user = request.user)[0]
+        first_pf = request.POST['q1']
+        final_pf = request.POST['q1']
+
 
 @login_required
 def fix(request):
     return render(request, 'fix.html')
 @login_required
 def update(request):
-
     if request.method == "POST":
+        now = datetime.datetime.now()
+        now = now.strftime('%Y/%m/%d %H:%M:%S')
+        std = datetime.datetime(2020,3,23,23,59,59)
+        std = std.strftime('%Y/%m/%d %H:%M:%S')
+        if now > std:
+            return render(request, 'over.html')
         objs = Apply.objects.filter(user = request.user)[0]
         objs.q1 = request.POST['q1']
         objs.q2 = request.POST['q2']
@@ -31,12 +45,21 @@ def update(request):
 
 @login_required
 def create(request):
+    
     objs = Apply.objects.filter(user = request.user)
     if len(objs):
         return redirect('update')
             # result = datetime.datetime.strptime(day,"%b %d, %Y %H:%M %p")
             # now = datetime.datetime.now()
+    
+    now = datetime.datetime.now()
+    now = now.strftime('%Y/%m/%d %H:%M:%S')
+    std = datetime.datetime(2020,3,23,23,59,59)
+    std = std.strftime('%Y/%m/%d %H:%M:%S')
+    if now > std:
+        return render(request, 'over.html')
     if request.method == "POST":
+        
         apply = Apply()
         apply.q1 = request.POST['q1']
         apply.q2 = request.POST['q2']
