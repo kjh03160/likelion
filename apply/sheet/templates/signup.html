@@ -60,9 +60,10 @@
     <nav style="height: initial !important;">
         <ul>
           <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
+          <li><a href="{% url 'recruit' %}">모집요강</a></li>
+
           {% if user.is_authenticated %}
           <li><a href="{%url 'logout'%}">Logout</a></li>
-          <li><a href="{% url 'recruit' %}">모집요강</a></li>
 
           <li><a href="{% url 'create' %}">Apply</a></li>
           <li><a href="{% url 'profile' %}">Profile</a></li>
