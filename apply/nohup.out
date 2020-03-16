@@ -159,3 +159,342 @@ Forbidden (CSRF token missing or incorrect.): /admin/login/
 [16/Mar/2020 03:27:49] "GET /static/like.jpg HTTP/1.1" 404 1655
 [16/Mar/2020 03:27:49] "GET /static/pro.mp4 HTTP/1.1" 200 897024
 [16/Mar/2020 03:27:49] "GET /static/pro.mp4 HTTP/1.1" 200 241664
+/home/ubuntu/www/likelion/apply/testapp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 16, 2020 - 02:54:47
+Django version 3.0.4, using settings 'apply.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+22222222222222
+22222222222222
+22222222222222
+22222222222222
+22222222222222
+22222222222222
+Watching for file changes with StatReloader
+[16/Mar/2020 03:47:03] "GET /main/ HTTP/1.1" 200 2020
+[16/Mar/2020 03:47:03] "GET /static/css/base.css HTTP/1.1" 304 0
+[16/Mar/2020 03:47:03] "GET /static/main_img.png HTTP/1.1" 304 0
+[16/Mar/2020 03:47:05] "GET /apply/ HTTP/1.1" 200 5991
+[16/Mar/2020 03:47:05] "GET /static/pro.mp4 HTTP/1.1" 200 3805184
+[16/Mar/2020 03:47:05] "GET /static/login.jpg HTTP/1.1" 304 0
+[16/Mar/2020 03:47:13] "POST /apply/ HTTP/1.1" 200 1680
+[16/Mar/2020 03:47:15] "GET /apply/ HTTP/1.1" 302 0
+[16/Mar/2020 03:47:15] "GET /update/ HTTP/1.1" 200 6188
+[16/Mar/2020 03:47:20] "POST /update/ HTTP/1.1" 200 1680
+[16/Mar/2020 03:47:21] "GET /apply/ HTTP/1.1" 302 0
+[16/Mar/2020 03:47:21] "GET /update/ HTTP/1.1" 200 6188
+[16/Mar/2020 03:47:24] "POST /update/ HTTP/1.1" 200 1680
+[16/Mar/2020 03:47:35] "GET /admin/ HTTP/1.1" 200 7008
+[16/Mar/2020 03:47:35] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[16/Mar/2020 03:47:35] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[16/Mar/2020 03:47:35] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[16/Mar/2020 03:47:35] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[16/Mar/2020 03:47:35] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[16/Mar/2020 03:47:35] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[16/Mar/2020 03:47:35] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[16/Mar/2020 03:47:35] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[16/Mar/2020 03:47:35] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[16/Mar/2020 03:47:35] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[16/Mar/2020 03:47:36] "GET /admin/auth/user/ HTTP/1.1" 200 7257
+[16/Mar/2020 03:47:36] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[16/Mar/2020 03:47:36] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:36] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:36] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:36] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:36] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[16/Mar/2020 03:47:37] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:37] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:37] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:37] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:37] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[16/Mar/2020 03:47:37] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[16/Mar/2020 03:47:37] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[16/Mar/2020 03:47:37] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[16/Mar/2020 03:47:39] "GET /admin/ HTTP/1.1" 200 7008
+[16/Mar/2020 03:47:40] "GET /admin/testapp/apply/ HTTP/1.1" 200 4436
+[16/Mar/2020 03:47:40] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[16/Mar/2020 03:47:40] "GET /admin/testapp/apply/1/change/ HTTP/1.1" 200 10205
+[16/Mar/2020 03:47:40] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[16/Mar/2020 03:47:40] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:40] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[16/Mar/2020 03:47:40] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[16/Mar/2020 03:47:41] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[16/Mar/2020 03:48:05] "GET / HTTP/1.1" 200 111
+[16/Mar/2020 03:48:06] "GET /main/ HTTP/1.1" 200 2020
+[16/Mar/2020 03:48:09] "GET /apply/ HTTP/1.1" 302 0
+[16/Mar/2020 03:48:10] "GET /update/ HTTP/1.1" 200 6188
+[16/Mar/2020 03:48:10] "GET /static/pro.mp4 HTTP/1.1" 200 12443648
+[16/Mar/2020 03:48:15] "POST /update/ HTTP/1.1" 200 1680
+[16/Mar/2020 03:48:16] "GET /apply/ HTTP/1.1" 302 0
+[16/Mar/2020 03:48:16] "GET /update/ HTTP/1.1" 200 6188
+/home/ubuntu/www/likelion/apply/testapp/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 16, 2020 - 03:40:51
+Django version 3.0.4, using settings 'apply.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+12
+12
+12
+Watching for file changes with StatReloader
+[16/Mar/2020 03:59:35] "GET /main/ HTTP/1.1" 200 2020
+[16/Mar/2020 03:59:35] "GET /static/css/base.css HTTP/1.1" 304 0
+[16/Mar/2020 03:59:35] "GET /static/main_img.png HTTP/1.1" 304 0
+[16/Mar/2020 03:59:37] "GET /apply/ HTTP/1.1" 302 0
+[16/Mar/2020 03:59:37] "GET /update/ HTTP/1.1" 200 6202
+[16/Mar/2020 03:59:37] "GET /static/pro.mp4 HTTP/1.1" 200 3452928
+[16/Mar/2020 03:59:37] "GET /static/login.jpg HTTP/1.1" 304 0
+[16/Mar/2020 03:59:41] "POST /update/ HTTP/1.1" 200 1680
+[16/Mar/2020 03:59:42] "GET /apply/ HTTP/1.1" 302 0
+[16/Mar/2020 03:59:42] "GET /update/ HTTP/1.1" 200 6187
+[16/Mar/2020 03:59:44] "POST /update/ HTTP/1.1" 200 1680
+[16/Mar/2020 03:59:46] "GET /logout/ HTTP/1.1" 302 0
+[16/Mar/2020 03:59:46] "GET /main/ HTTP/1.1" 200 1788
+[16/Mar/2020 03:59:47] "GET /accounts/login/ HTTP/1.1" 200 4920
+[16/Mar/2020 03:59:47] "GET /static/pro.mp4 HTTP/1.1" 200 4898816
+[16/Mar/2020 03:59:47] "GET /static/123.jpg HTTP/1.1" 304 0
+[16/Mar/2020 03:59:49] "GET /main/ HTTP/1.1" 200 1788
+[16/Mar/2020 03:59:56] "GET /static/pro.mp4 HTTP/1.1" 200 18579456
+[16/Mar/2020 07:52:04] "GET / HTTP/1.1" 200 111
+[16/Mar/2020 07:52:05] "GET /main/ HTTP/1.1" 200 1788
+[16/Mar/2020 07:52:05] "GET /static/css/base.css HTTP/1.1" 200 2166
+[16/Mar/2020 07:52:05] "GET /static/main_img.png HTTP/1.1" 200 24850
+[16/Mar/2020 07:52:06] "GET /static/pro.mp4 HTTP/1.1" 200 2584576
+[16/Mar/2020 07:52:09] "GET /accounts/login/ HTTP/1.1" 200 4920
+[16/Mar/2020 07:52:09] "GET /static/123.jpg HTTP/1.1" 200 766914
+[16/Mar/2020 07:52:15] "GET /signup/ HTTP/1.1" 200 7473
+[16/Mar/2020 07:52:54] "POST /signup/ HTTP/1.1" 302 0
+[16/Mar/2020 07:52:54] "GET / HTTP/1.1" 200 111
+[16/Mar/2020 07:52:55] "GET /main/ HTTP/1.1" 200 1926
+[16/Mar/2020 07:52:55] "GET /static/pro.mp4 HTTP/1.1" 200 2768896
+[16/Mar/2020 09:15:51] "GET / HTTP/1.1" 200 111
+[16/Mar/2020 09:15:53] "GET /main/ HTTP/1.1" 200 1788
+[16/Mar/2020 09:15:53] "GET /static/css/base.css HTTP/1.1" 200 2166
+[16/Mar/2020 09:15:53] "GET /static/main_img.png HTTP/1.1" 200 24850
+[16/Mar/2020 09:15:54] "GET /static/like.jpg HTTP/1.1" 404 1655
+[16/Mar/2020 09:15:59] "GET /admin/ HTTP/1.1" 302 0
+[16/Mar/2020 09:15:59] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1933
+[16/Mar/2020 09:16:00] "GET /static/pro.mp4 HTTP/1.1" 200 18173952
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[16/Mar/2020 09:16:00] "GET /static/pro.mp4 HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('218.235.17.6', 51260)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/ubuntu/www/likelion/myvenv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 119, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/ubuntu/www/likelion/myvenv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/home/ubuntu/www/likelion/myvenv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 197, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/ubuntu/www/likelion/myvenv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 114, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[16/Mar/2020 09:16:00] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[16/Mar/2020 09:16:00] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[16/Mar/2020 09:16:00] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18052
+[16/Mar/2020 09:16:00] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[16/Mar/2020 09:16:00] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[16/Mar/2020 09:16:00] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[16/Mar/2020 09:16:00] "GET /favicon.ico HTTP/1.1" 404 3588
+[16/Mar/2020 09:16:09] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[16/Mar/2020 09:16:09] "GET /admin/ HTTP/1.1" 200 7008
+[16/Mar/2020 09:16:09] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[16/Mar/2020 09:16:09] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[16/Mar/2020 09:16:09] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[16/Mar/2020 09:16:09] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[16/Mar/2020 09:16:09] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[16/Mar/2020 09:16:12] "GET /admin/auth/user/ HTTP/1.1" 200 7690
+[16/Mar/2020 09:16:12] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6190
+[16/Mar/2020 09:16:12] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[16/Mar/2020 09:16:12] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[16/Mar/2020 09:16:12] "GET /static/admin/js/core.js HTTP/1.1" 200 5723
+[16/Mar/2020 09:16:12] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 280364
+[16/Mar/2020 09:16:12] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[16/Mar/2020 09:16:12] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[16/Mar/2020 09:16:12] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[16/Mar/2020 09:16:12] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[16/Mar/2020 09:16:12] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[16/Mar/2020 09:16:12] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[16/Mar/2020 09:16:12] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[16/Mar/2020 09:16:13] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[16/Mar/2020 09:16:13] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[16/Mar/2020 09:16:13] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[16/Mar/2020 09:16:16] "GET /admin/auth/user/10/change/ HTTP/1.1" 200 14864
+[16/Mar/2020 09:16:16] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+[16/Mar/2020 09:16:16] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20232
+[16/Mar/2020 09:16:16] "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 5753
+[16/Mar/2020 09:16:16] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[16/Mar/2020 09:16:16] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[16/Mar/2020 09:16:16] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12318
+[16/Mar/2020 09:16:16] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[16/Mar/2020 09:16:16] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[16/Mar/2020 09:16:16] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10322
+[16/Mar/2020 09:16:16] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[16/Mar/2020 09:16:16] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[16/Mar/2020 09:16:16] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[16/Mar/2020 09:16:16] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[16/Mar/2020 09:16:16] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[16/Mar/2020 09:16:18] "GET /admin/auth/user/ HTTP/1.1" 200 7690
+[16/Mar/2020 09:16:19] "GET /admin/auth/user/1/change/ HTTP/1.1" 200 14874
+[16/Mar/2020 09:16:19] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[16/Mar/2020 09:16:20] "GET /admin/auth/user/ HTTP/1.1" 200 7690
+[16/Mar/2020 09:16:21] "GET /admin/auth/user/11/change/ HTTP/1.1" 200 14858
+[16/Mar/2020 09:16:21] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[16/Mar/2020 09:16:28] "POST /admin/auth/user/11/change/ HTTP/1.1" 302 0
+[16/Mar/2020 09:16:28] "GET /admin/auth/user/ HTTP/1.1" 200 7887
+[16/Mar/2020 09:16:28] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[16/Mar/2020 11:09:01] "GET / HTTP/1.1" 200 111
+[16/Mar/2020 11:09:03] "GET /main/ HTTP/1.1" 200 1788
+[16/Mar/2020 11:09:03] "GET /static/css/base.css HTTP/1.1" 200 2166
+[16/Mar/2020 11:09:03] "GET /static/like.jpg HTTP/1.1" 404 1655
+Not Found: /favicon.ico
+[16/Mar/2020 11:09:03] "GET /favicon.ico HTTP/1.1" 404 3588
+[16/Mar/2020 11:09:03] "GET /static/main_img.png HTTP/1.1" 200 24850
+[16/Mar/2020 11:09:03] "GET /static/pro.mp4 HTTP/1.1" 200 204800
+[16/Mar/2020 11:09:08] "GET /static/pro.mp4 HTTP/1.1" 200 11829248
+[16/Mar/2020 11:34:30] "GET / HTTP/1.1" 200 97
+[16/Mar/2020 11:34:32] "GET /main/ HTTP/1.1" 200 1788
+[16/Mar/2020 11:34:32] "GET /static/css/base.css HTTP/1.1" 304 0
+[16/Mar/2020 11:34:32] "GET /static/main_img.png HTTP/1.1" 304 0
+[16/Mar/2020 11:34:33] "GET /static/like.jpg HTTP/1.1" 404 1655
+[16/Mar/2020 11:34:39] "GET /accounts/login/ HTTP/1.1" 200 4920
+[16/Mar/2020 11:34:39] "GET /static/pro.mp4 HTTP/1.1" 200 25358336
+[16/Mar/2020 11:34:39] "GET /static/123.jpg HTTP/1.1" 304 0
+[16/Mar/2020 11:50:24] "GET / HTTP/1.1" 200 97
+[16/Mar/2020 11:50:26] "GET /main/ HTTP/1.1" 200 1998
+[16/Mar/2020 11:50:30] "GET /static/pro.mp4 HTTP/1.1" 200 22241280
+[16/Mar/2020 13:33:10] "GET / HTTP/1.1" 200 97
+[16/Mar/2020 13:33:13] "GET /main/ HTTP/1.1" 200 1998
+[16/Mar/2020 13:33:13] "GET /static/css/base.css HTTP/1.1" 200 2166
+[16/Mar/2020 13:33:13] "GET /static/main_img.png HTTP/1.1" 200 24850
+[16/Mar/2020 13:33:26] "GET /accounts/login/ HTTP/1.1" 200 5130
+[16/Mar/2020 13:33:26] "GET /static/pro.mp4 HTTP/1.1" 200 35475456
+[16/Mar/2020 13:33:26] "GET /static/123.jpg HTTP/1.1" 200 766914
+[16/Mar/2020 13:33:40] "POST /accounts/login/ HTTP/1.1" 302 0
+[16/Mar/2020 13:33:40] "GET /apply/ HTTP/1.1" 200 5991
+[16/Mar/2020 13:33:40] "GET /static/login.jpg HTTP/1.1" 200 157428
+[16/Mar/2020 13:33:45] "GET /main/ HTTP/1.1" 200 2230
+[16/Mar/2020 13:33:51] "GET /recruit/ HTTP/1.1" 200 1118
+[16/Mar/2020 13:33:51] "GET /static/pro.mp4 HTTP/1.1" 200 16195584
+[16/Mar/2020 13:33:52] "GET /main/ HTTP/1.1" 200 2230
+[16/Mar/2020 13:33:55] "GET /logout/ HTTP/1.1" 302 0
+[16/Mar/2020 13:33:55] "GET /main/ HTTP/1.1" 200 1998
+[16/Mar/2020 13:33:55] "GET /static/pro.mp4 HTTP/1.1" 200 8359936
+[16/Mar/2020 13:34:25] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
+[16/Mar/2020 13:45:55] "GET / HTTP/1.1" 200 97
+[16/Mar/2020 13:57:02] "GET / HTTP/1.0" 200 97
+[16/Mar/2020 14:48:11] "GET / HTTP/1.1" 200 97
+[16/Mar/2020 14:48:16] "GET / HTTP/1.1" 200 97
+[16/Mar/2020 14:48:23] "GET / HTTP/1.1" 200 97
+[16/Mar/2020 14:48:26] "GET /main/ HTTP/1.1" 200 2050
+[16/Mar/2020 14:48:26] "GET /static/css/base.css HTTP/1.1" 200 2166
+[16/Mar/2020 14:48:26] "GET /static/main_img.png HTTP/1.1" 200 24850
+[16/Mar/2020 14:48:30] "GET /accounts/login/ HTTP/1.1" 200 5181
+[16/Mar/2020 14:48:30] "GET /static/pro.mp4 HTTP/1.1" 200 7462912
+[16/Mar/2020 14:48:31] "GET /static/123.jpg HTTP/1.1" 200 766914
+[16/Mar/2020 14:48:40] "POST /accounts/login/ HTTP/1.1" 302 0
+[16/Mar/2020 14:48:41] "GET /apply/ HTTP/1.1" 200 6044
+[16/Mar/2020 14:48:41] "GET /static/login.jpg HTTP/1.1" 200 157428
+[16/Mar/2020 14:49:02] "GET /apply/ HTTP/1.1" 200 6044
+[16/Mar/2020 14:49:05] "GET /view/ HTTP/1.1" 200 7041
+[16/Mar/2020 14:49:07] "GET /detail/1 HTTP/1.1" 200 7707
+[16/Mar/2020 14:50:15] "GET /main/ HTTP/1.1" 200 2050
+----------------------------------------
+Exception happened during processing of request from ('203.253.80.100', 9308)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/ubuntu/www/likelion/myvenv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/home/ubuntu/www/likelion/myvenv/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[16/Mar/2020 15:03:46] "GET /detail/1 HTTP/1.1" 200 7707
+[16/Mar/2020 15:43:08] "GET / HTTP/1.1" 200 97
+[16/Mar/2020 15:43:09] "GET /main/ HTTP/1.1" 200 2050
+[16/Mar/2020 15:43:09] "GET /static/css/base.css HTTP/1.1" 200 2166
+[16/Mar/2020 15:43:09] "GET /static/main_img.png HTTP/1.1" 200 24850
+[16/Mar/2020 15:43:13] "GET /accounts/login/ HTTP/1.1" 200 5181
+[16/Mar/2020 15:43:13] "GET /static/pro.mp4 HTTP/1.1" 200 17801216
+[16/Mar/2020 15:43:13] "GET /static/123.jpg HTTP/1.1" 200 766914
+[16/Mar/2020 15:43:20] "POST /accounts/login/ HTTP/1.1" 200 5531
+[16/Mar/2020 15:43:31] "POST /accounts/login/ HTTP/1.1" 302 0
+[16/Mar/2020 15:43:31] "GET /apply/ HTTP/1.1" 302 0
+[16/Mar/2020 15:43:31] "GET /update/ HTTP/1.1" 200 6255
+[16/Mar/2020 15:43:32] "GET /static/login.jpg HTTP/1.1" 200 157428
+[16/Mar/2020 15:57:29] "GET /view/ HTTP/1.1" 200 7041
+[16/Mar/2020 15:57:33] "GET /detail/1 HTTP/1.1" 200 7707
+[16/Mar/2020 15:57:41] "GET /main/ HTTP/1.1" 200 2230
+[16/Mar/2020 15:57:44] "GET /view/ HTTP/1.1" 200 7041
+[16/Mar/2020 15:57:44] "GET /static/pro.mp4 HTTP/1.1" 200 14696448
+[16/Mar/2020 15:57:50] "GET /main/ HTTP/1.1" 200 2230
+[16/Mar/2020 15:58:41] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
+[16/Mar/2020 15:59:46] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
+[16/Mar/2020 16:00:59] "GET /static/pro.mp4 HTTP/1.1" 200 79934595
