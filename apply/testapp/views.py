@@ -20,7 +20,7 @@ def update(request):
     if request.method == "POST":
         now = datetime.datetime.now()
         now = now.strftime('%Y/%m/%d %H:%M:%S')
-        std = datetime.datetime(2020,3,23,23,59,59)
+        std = datetime.datetime(2020,3,25,23,59,59)
         std = std.strftime('%Y/%m/%d %H:%M:%S')
         if now > std:
             return render(request, 'over.html')
@@ -54,7 +54,7 @@ def create(request):
     
     now = datetime.datetime.now()
     now = now.strftime('%Y/%m/%d %H:%M:%S')
-    std = datetime.datetime(2020,3,23,23,59,59)
+    std = datetime.datetime(2020,3,25,23,59,59)
     std = std.strftime('%Y/%m/%d %H:%M:%S')
     if now > std:
         return render(request, 'over.html')
