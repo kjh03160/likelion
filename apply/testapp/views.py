@@ -118,3 +118,13 @@ def user_list(request):
 def recruit(request):
     return render(request, 'recruit.html')
 
+
+def result(request):
+    user1 = Apply.objects.filter(user = request.user)
+    if len(user1):
+        user1 = user1[0]
+        print(user1.first_pf)
+        return render(request, 'result.html', {'user1' : user1})
+
+    else:
+        return render (request, 'result.html', {'user1' : None})
