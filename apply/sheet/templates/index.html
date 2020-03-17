@@ -25,6 +25,8 @@
 
       {% else %}
       <li><a href="{%url 'login'%}">Login</a></li>
+      <li><a href="{%url 'signup'%}">Signup</a></li>
+
       {%endif%}
       <li >오류 및 문의사항 : kis03160@likelion.org</li>
       {% if user.is_staff %}
