@@ -81,7 +81,7 @@
             height: 100%;
         }
         section{
-          margin: 100px;
+          padding: 100px;
           /* margin-top: 18% !important; */
           /* margin-top: 400px; */
           height: 80%;
@@ -187,7 +187,7 @@
               {%endif%}
             </ul>
           </nav>
-        
+
                 <section>
                         <!--for demo wrap-->
                         <div class="tbl-header">
@@ -227,15 +227,18 @@
                             </tbody>
                         </table>
                       </div>
+                      <p style="color: white; text-align: right;"><b style="color:springgreen;">{{posts|length}}</b>명 제출</p>
+
                     </section>
+
       </body>
       </html>
 
       {% else %}
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     alert('로그인이 필요합니다.')
     window.location.href = 'login';
-  </script>
+  </script> -->
 {% endif %}
