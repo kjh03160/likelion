@@ -120,6 +120,12 @@ def recruit(request):
 
 
 def result(request):
+    now = datetime.datetime.now()
+    now = now.strftime('%Y/%m/%d %H:%M:%S')
+    std = datetime.datetime(2020,3,30,12,00,00)
+    std = std.strftime('%Y/%m/%d %H:%M:%S')
+    if now < std:
+        return render(request, 'not.html')
     user1 = Apply.objects.filter(user = request.user)
     if len(user1):
         user1 = user1[0]
