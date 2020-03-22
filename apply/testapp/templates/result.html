@@ -120,14 +120,15 @@ window.location.href = '/';
 
     background-color: rgba( 0, 0, 0, 0.3 )
   }
-  @font-face { font-family: 'MapoGoldenPier'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff'); font-weight: normal; font-style: normal; }  p{
+  @font-face { font-family: 'KOMACON'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); font-weight: normal; font-style: normal; }
+  p{
     color:white;
     word-break:keep-all;
     padding: 2%;
     font-size:larger;
     font-weight: 600;
     letter-spacing: 2px;
-    font-family: 'MapoGoldenPier';
+    font-family: 'KOMACON';
     line-height: 28px;
     
   }
@@ -143,6 +144,7 @@ window.location.href = '/';
     background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t31.0-8/819141_540051582686309_853715522_o.jpg?_nc_cat=110&_nc_sid=7aed08&_nc_ohc=lJY7Uz7vKjsAX_3Froa&_nc_ht=scontent-gmp1-1.xx&oh=a1b829c225f9ad1b8bcc8c4b0633cb58&oe=5E9DF085');
     background-repeat : no-repeat;
         background-size : cover;
+        background-attachment: fixed;
   }
   body{
     overflow-y: scroll !important;
@@ -173,7 +175,7 @@ window.location.href = '/';
 
 <script>
     alert('로그인이 필요합니다.')
-window.location.href = '/';
+window.location.href = '/main';
 </script>
 
 {%endif%}
