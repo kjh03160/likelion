@@ -197,9 +197,10 @@
       {%endif%}
       <li >오류 및 문의사항 : kis03160@likelion.org</li>
       {% if user.is_staff %}
-      <li style="float: right; padding-right: 5%; color:chartreuse;"><a href="{% url 'users' %}">{{users|length}}명</a></li>
 
       <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">운영진</a></li>
+      <li style="float: right; padding-right: 5%; color:chartreuse;"><a href="{% url 'users' %}">{{users|length}}명</a></li>
+
       {%endif%}
     </ul>
   </nav>
