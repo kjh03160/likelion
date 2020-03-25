@@ -54,7 +54,7 @@ def create(request):
     
     now = datetime.datetime.now()
     now = now.strftime('%Y/%m/%d %H:%M:%S')
-    std = datetime.datetime(2020,3,25,23,59,59)
+    std = datetime.datetime(2020,3,26,00,00,00)
     std = std.strftime('%Y/%m/%d %H:%M:%S')
     if now > std:
         return render(request, 'over.html')
