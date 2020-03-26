@@ -80,7 +80,11 @@ def create(request):
 def view(request):
     if request.user.is_staff:
         posts = Apply.objects.all().order_by('first_pf')
-        return render(request, 'detail.html', {'posts' : posts})
+        pass_num = 0
+        for i in posts:
+            if i.first_pf == "P":
+                pass_num += 1
+        return render(request, 'detail.html', {'posts' : posts, 'pass' : pass_num})
     else:
         return render(request, 'alert.html')
 
