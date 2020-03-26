@@ -79,7 +79,7 @@ def create(request):
 
 def view(request):
     if request.user.is_staff:
-        posts = Apply.objects.all()
+        posts = Apply.objects.all().order_by('first_pf')
         return render(request, 'detail.html', {'posts' : posts})
     else:
         return render(request, 'alert.html')
