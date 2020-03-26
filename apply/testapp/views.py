@@ -86,7 +86,7 @@ def view(request):
             if i.first_pf == "P":
                 pass_num += 1
             if i.first_pf  == "F":
-                fail += 0
+                fail += 1
 
         return render(request, 'detail.html', {'posts' : posts, 'pass' : pass_num, 'fail' : fail})
     else:
