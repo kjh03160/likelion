@@ -65,8 +65,8 @@
           {% if user.is_authenticated %}
           <li><a href="{%url 'logout'%}">Logout</a></li>
 
-          <li><a href="{% url 'create' %}">Apply</a></li>
-          <li><a href="{% url 'profile' %}">Profile</a></li>
+          <li><a href="{% url 'create' %}">지원서 확인</a></li>
+          <li><a href="{% url 'result' %}">합격 조회</a></li>
     
     
           {% else %}
