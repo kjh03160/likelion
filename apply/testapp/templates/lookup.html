@@ -223,7 +223,7 @@
   {% csrf_token %}
             <h4>1. 자기 소개와 지원 동기를 말씀해주세요. <b>({{q.q1|length}}자)</b></h4>
             <!-- <textarea rows="10" cols="100" name="q1" required disabled>{{q.q1}}</textarea> -->
-            <textarea rows="10" cols="100" name="q1" required disabled>{{q.q1}}</textarea>
+            <textarea rows="10" cols="150" name="q1" required disabled>{{q.q1}}</textarea>
             <!-- <p style="background-color: gainsboro; width: 63%; border-radius: 3px; padding: 1%; word-break: break-all;">{{q.q1}}</p> -->
 
             <br>
@@ -233,26 +233,26 @@
             <h5>지금까지 살아오면서 마음이 끌리는 무언가에 시간을 투자해 결과물을 만들어낸 것이 있다면 공유해주세요!<br>
                반드시 소프트웨어와 관련된 것이 아니어도 괜찮습니다. 어떤 성과를 냈는지도 중요하지만,<br>
                어떤 과정과 노력을 통해 그런 성과를 낼 수 있었는지 작성해주세요!</h5>
-               <textarea rows="10" cols="100" name="q2" required disabled>{{q.q2}}</textarea>
+               <textarea rows="10" cols="150" name="q2" required disabled>{{q.q2}}</textarea>
             <!-- <p style="background-color: gainsboro; width: 63%; border-radius: 3px; padding: 1%; word-break: break-all;">{{q.q1}}</p> -->
             <br>
             <br>
   
             <h4>3. 본인이 만들어 보고 싶은 웹 서비스는 무엇인가요? <b>({{q.q3|length}}자)</b></h4>
-            <textarea rows="10" cols="100" name="q3" required disabled>{{q.q3}}</textarea>
+            <textarea rows="10" cols="150" name="q3" required disabled>{{q.q3}}</textarea>
             <br>
             <br>
   
           <h4>4. 프로그래밍 경험이 있다면 사용 언어 및 기술 스택의 수준, 프로젝트 경험에 대해 말씀해주세요. <b>({{q.q4|length}}자)</b>
             <br>없다면 향후 공부 계획을 말씀해주시면 됩니다. </h4>
-            <textarea rows="10" cols="100" name="q4" required disabled>{{q.q4}}</textarea>
+            <textarea rows="10" cols="150" name="q4" required disabled>{{q.q4}}</textarea>
             <br>
             <br>
         
         <h4>5. 주 1회 팀스터디를 진행하게 됩니다. 스터디를 하고 싶은 주제에 대해 자유롭게 적어주세요. <b>({{q.q5|length}}자)</b>
           <br> 평가에 반영되지 않고 향후 팀 빌딩을 위한 것이니 편하게 말씀해주시면 됩니다. 
         </h4>
-            <textarea rows="10" cols="100" name="q5" required disabled>{{q.q5}}</textarea>
+            <textarea rows="10" cols="150" name="q5" required disabled>{{q.q5}}</textarea>
             <br>
             <br>
           <h4 style="float: left;">6. Codecademy 듣고 왔니? </h4>       {% if q.codecademy == "yes" %}
