@@ -181,7 +181,7 @@
               {%endif%}
               <li >오류 및 문의사항 : kis03160@likelion.org</li>
               {% if user.is_staff %}
-              <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">{{pass}}명 합격</a></li>
+              <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">{{pass}}명 합격/{{fail}}불합</a></li>
               <li style="float: right; padding-right: 5%;"><a href="{% url 'users' %}">유저목록</a></li>
 
               {%endif%}
