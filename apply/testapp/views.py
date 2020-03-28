@@ -79,7 +79,7 @@ def create(request):
 
 def view(request):
     if request.user.is_staff:
-        posts = Apply.objects.all().order_by('first_pf')
+        posts = Apply.objects.all().order_by('-first_pf')
         pass_num = 0
         fail = 0
         for i in posts:
@@ -101,7 +101,7 @@ def lookup(request, pk):
         return render(request, 'alert.html')
 
 def assess(request, pk):
-    if request.user.is_staff:
+    if request.user.is_superuser:
         post = get_object_or_404(Apply, pk = pk)
         if request.method == "POST":
             try:
