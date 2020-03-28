@@ -88,7 +88,7 @@ def view(request):
                 pass_num += 1
             if i.first_pf  == "F":
                 fail += 1
-            if i.interview == "off" and i.final_pf =="P":
+            if i.interview == "off" and i.first_pf =="P":
                 off += 1
 
         return render(request, 'detail.html', {'posts' : posts, 'pass' : pass_num, 'fail' : fail , 'off' : off})
