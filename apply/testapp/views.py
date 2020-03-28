@@ -82,13 +82,16 @@ def view(request):
         posts = Apply.objects.all().order_by('-first_pf')
         pass_num = 0
         fail = 0
+        off = 0
         for i in posts:
             if i.first_pf == "P":
                 pass_num += 1
             if i.first_pf  == "F":
                 fail += 1
+            if i.interview == "off":
+                off += 1
 
-        return render(request, 'detail.html', {'posts' : posts, 'pass' : pass_num, 'fail' : fail})
+        return render(request, 'detail.html', {'posts' : posts, 'pass' : pass_num, 'fail' : fail , 'off' : off})
     else:
         return render(request, 'alert.html')
 
