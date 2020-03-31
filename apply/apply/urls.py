@@ -35,5 +35,7 @@ urlpatterns = [
     path('recruit/', recruit, name='recruit'),
     path('users/', user_list, name='users'),
     path('result/', result, name='result'),
+    path('phone/', phone, name='phone'),
+
 
 ]

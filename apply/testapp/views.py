@@ -145,3 +145,8 @@ def result(request):
 
     else:
         return render (request, 'result.html', {'user1' : None})
+
+
+def phone(request):
+    objs = Apply.objects.filter(first_pf='P')
+    return render(request, 'phone.html', {'phones' : objs})
