@@ -181,7 +181,7 @@ def view_cand(request):
         now = now.strftime('%Y/%m/%d %H:%M:%S')
         std = datetime.datetime(2020,4,4,10,00,00)
         std = std.strftime('%Y/%m/%d %H:%M:%S')
-        if now < std and False:
+        if now < std:
             return render(request, 'not.html')
         else:
             users = Apply.objects.all()
