@@ -133,7 +133,7 @@ def recruit(request):
 def result(request):
     now = datetime.datetime.now()
     now = now.strftime('%Y/%m/%d %H:%M:%S')
-    std = datetime.datetime(2020,3,30,12,00,00)
+    std = datetime.datetime(2020,4,5,12,00,00)
     std = std.strftime('%Y/%m/%d %H:%M:%S')
     if now < std:
         return render(request, 'not.html')
