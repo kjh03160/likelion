@@ -179,7 +179,7 @@ def view_cand(request):
     if request.user.is_staff:
         now = datetime.datetime.now()
         now = now.strftime('%Y/%m/%d %H:%M:%S')
-        std = datetime.datetime(2020,4,4,12,00,00)
+        std = datetime.datetime(2020,4,4,10,00,00)
         std = std.strftime('%Y/%m/%d %H:%M:%S')
         if now < std and False:
             return render(request, 'not.html')
