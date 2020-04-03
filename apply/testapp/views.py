@@ -131,13 +131,14 @@ def recruit(request):
 
 
 def result(request):
+    user1 = Apply.objects.filter(user = request.user)
+
     now = datetime.datetime.now()
     now = now.strftime('%Y/%m/%d %H:%M:%S')
     std = datetime.datetime(2020,4,5,12,00,00)
     std = std.strftime('%Y/%m/%d %H:%M:%S')
-    if now < std:
+    if now < std and user1[0].first_pf == "P":
         return render(request, 'not.html')
-    user1 = Apply.objects.filter(user = request.user)
     if len(user1):
         user1 = user1[0]
         print(user1.first_pf)
