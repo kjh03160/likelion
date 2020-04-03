@@ -79,7 +79,7 @@ def create(request):
 
 def view(request):
     if request.user.is_staff:
-        posts = Apply.objects.all().order_by('-first_pf')
+        posts = Apply.objects.all().order_by('-first_pf').filter(first_pf="P")
         pass_num = 0
         fail = 0
         off = 0
