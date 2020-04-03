@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIKELION X HUFS</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/53319997_2288407134771022_3834362680915787776_n.png?_nc_cat=103&_nc_sid=85a577&_nc_ohc=pZI-6OuidJoAX906gdj&_nc_ht=scontent-ssn1-1.xx&oh=169c1ca43ff1a44f13031afaa5c28e89&oe=5E954E5A">
+<link rel="Stylesheet" type="text/css" href="/static/css/base.css">
+
+<style>
+    body{
+      color :white !important;
+      width: 100%;
+    }
+
+    form {
+      width: 60%;
+      padding-left: 5%;
+      padding-top: 2%;
+      font-family: 'Cafe24Ohsquare';
+      padding-bottom: 4%;
+      float: left;
+      margin-top: 5%;
+      z-index: 10 !important;
+    }
+    textarea{
+      background-color: gainsboro !important;
+      padding: 10px !important;
+      font-family: 'Cafe24Ohsquare';
+      border-radius: 5px;
+      width: 100%;
+      
+
+    }
+    h4, h5 {
+      font-size: 15px !important;
+      margin-bottom: 6px !important;
+      letter-spacing: 2px !important;
+      /* white-space: nowrap; */
+      width: auto;
+
+    }
+    button {
+      width: 20% !important;
+      background-color: orange !important;
+      border-color: orange !important;
+      /* margin-top: 3% !important; */
+      float: right !important;
+      position: absolute !important;
+      left: 40%;
+      margin-bottom: 3% !important ;
+
+    }
+    nav{
+      font: 25px/1 !important;
+      font-size:medium;
+
+    }
+    #right{
+      width: 39%;
+      float: right !important;
+    /* display:block; */
+    /* position: relative; */
+    border-right: ivory;
+    border-width: 10px;
+    margin-top: 5%;
+    z-index: -10;
+      }
+    img{
+      width: 100%;
+      height: 70%;
+      /* margin-left: 4%; */
+      margin-bottom: 1%;
+
+    }
+
+    @font-face { font-family: 'Cafe24Ohsquare'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff'); font-weight: normal; font-style: normal; }
+  </style>
+
+
+
+
+</head>
+<body style="height: 89% !important;">
+
+    
+  <nav style="height: initial !important;">
+    <ul>
+      <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
+      <li><a href="{% url 'recruit' %}">모집요강</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="{%url 'logout'%}">Logout</a></li>
+
+      <li><a href="{% url 'create' %}">지원서 확인</a></li>
+      <li><a href="{% url 'result' %}">합격 조회</a></li>
+      <li><a href="{% url 'profile' %}">Profile</a></li>
+
+
+      {% else %}
+      <li><a href="{%url 'login'%}">Login</a></li>
+      <li><a href="{%url 'signup'%}">Signup</a></li>
+
+      {%endif%}
+      <li >오류 및 문의사항 : kis03160@likelion.org</li>
+      {% if user.is_staff %}
+      <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">운영진</a></li>
+      {%endif%}
+    </ul>
+  </nav>
+
+
+  <form action="{% url 'cand' %}" method="POST">
+    {% csrf_token %}
+   
+            <h4>1</h4>
+    <textarea rows="10" name="q1" required></textarea>
+    <br>
+    <br>
+   
+    <h4>2. </h4>
+    <textarea rows="10" name="q2" required></textarea>
+    <br>
+    <br>
+   
+            <h4>3</h4>
+    <textarea rows="10" name="q3" required></textarea>
+    <br>
+    <br>
+   
+          <h4>4. </h4>
+    <textarea rows="10" name="q4" required></textarea>
+    <br>
+    <br>
+   
+        <h4>5. 
+        </h4>
+    <textarea rows="10" cols="100" name="q5" required></textarea>
+    <br>
+    <br>
+   
+   <h4 style="float: left;" >6. Codecademy HTML Chapter1 수강하셨습니까?</h4>
+   
+   <input name="codecademy" type="radio" value="yes" style="margin-left: 2%;" required/>
+        <label for="codecademy">네</label>
+        <input name="codecademy" type="radio" value="no" style="margin-left: 2%;" required/>
+        <label for="codecademy">아니오</label>
+   <br>
+   <h4 >7. 면접 온/오프라인 여부<select style="margin-left: 2%;" name="interview">
+     <option value="on">온라인</option>
+     <option value="off">오프라인</option>
+   </select></h4>
+   
+   
+   <button class="btn btn-lg btn-primary btn-block sign-in" type="submit">
+     저장
+    </button>
+   </form>
+    
+
+
+
+</body>
+
+
+</html>

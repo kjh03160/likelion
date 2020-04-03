@@ -151,3 +151,44 @@ def result(request):
 def phone(request):
     objs = Apply.objects.filter(first_pf='P')
     return render(request, 'phone.html', {'phones' : objs})
+
+
+def cand(request):
+    if request.user.is_staff:
+        if request.method == "POST":
+            apply = Apply()
+            apply.q1 = request.POST['q1']
+            apply.q2 = request.POST['q2']
+            apply.q3 = request.POST['q3']
+            apply.q4 = request.POST['q4']
+            apply.q5 = request.POST['q5']
+            apply.codecademy = request.POST['codecademy']
+            apply.interview = request.POST['interview']
+            apply.user = request.user
+            apply.signup = Signup.objects.get(user=request.user)
+            apply.save()
+            return redirect('/')
+        else:
+            return render(request, 'cand.html')
+    else:
+        return render(request, 'alert.html')
+
+
+
+def view_cand(request):
+    if request.user.is_staff:
+        now = datetime.datetime.now()
+        now = now.strftime('%Y/%m/%d %H:%M:%S')
+        std = datetime.datetime(2020,4,4,12,00,00)
+        std = std.strftime('%Y/%m/%d %H:%M:%S')
+        if now < std and False:
+            return render(request, 'not.html')
+        else:
+            users = Apply.objects.all()
+            result = []
+            for i in users:
+                if i.user.is_staff:
+                    result.append(i)
+            return render(request, 'cand_view.html', {'qs' : result})
+    else:
+        return render(request, 'alert.html')
