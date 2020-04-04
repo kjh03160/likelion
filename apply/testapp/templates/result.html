@@ -4,17 +4,20 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>지원 결과({{user1.signup.name}})    </title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/53319997_2288407134771022_3834362680915787776_n.png?_nc_cat=103&_nc_sid=85a577&_nc_ohc=pZI-6OuidJoAX906gdj&_nc_ht=scontent-ssn1-1.xx&oh=169c1ca43ff1a44f13031afaa5c28e89&oe=5E954E5A">
-<link rel="Stylesheet" type="text/css" href="/static/css/base.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지원 결과({{user1.signup.name}}) </title>
+
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/53319997_2288407134771022_3834362680915787776_n.png?_nc_cat=103&_nc_sid=85a577&_nc_ohc=pZI-6OuidJoAX906gdj&_nc_ht=scontent-ssn1-1.xx&oh=169c1ca43ff1a44f13031afaa5c28e89&oe=5E954E5A">
+  <link rel="Stylesheet" type="text/css" href="/static/css/base.css">
 </head>
+
 <body style="height: 89% !important;">
 
-    
+
   <nav style="height: initial !important;">
     <ul>
       <li class="active"><a href="{% url 'home' %}">LIKELION X HUFS(Seoul)</a></li>
@@ -31,205 +34,258 @@
       <li><a href="{%url 'signup'%}">Signup</a></li>
 
       {%endif%}
-      <li >오류 및 문의사항 : kis03160@likelion.org</li>
+      <li>오류 및 문의사항 : kis03160@likelion.org</li>
       {% if user.is_staff %}
       <li style="float: right; padding-right: 5%;"><a href="{% url 'view' %}">운영진</a></li>
       {%endif%}
     </ul>
   </nav>
 
-{% if user1 %}
-{% if user1.first_pf == "P" %}
-{% if user1.final_pf == "P" %}
+  {% if user1 %}
+  {% if user1.first_pf == "P" %}
+  {% if user1.final_pf == "P" %}
 
-    <div id="main1" style=" overflow: hidden !important;">
-      <div id='content' style="padding-top: 10%;">
+  <div id="main12" style=" overflow: hidden !important;">
+    <div id='content' style="padding-top: 10%;">
 
-        <h1 style="color: yellow;">{{user1.signup.name}}님 합격을 축하드립니다.</h1>
-    <br><br><br>
-        <p style="font-size: x-large;">빠른 시일 내에 단체 톡방을 만들어서 초대해드리겠습니다. <br> 다시 한 번 합격을 축하드립니다.</p>
-    </div></div>
-{%else%}
+      <h1 style="color: yellow;">{{user1.signup.name}}님 합격을 축하드립니다.</h1>
+      <br><br><br><br>
+      <p style="font-size: x-large;">빠른 시일 내에 단체 톡방을 만들어서 초대해드리겠습니다. <br> 다시 한 번 합격을 축하드립니다.</p>
+    </div>
+  </div>
+  {%else%}
 
-<div id="main">
-  <div id='content'>
-    <h1 style="padding-top: 7% !important;">{{user1.signup.name}}님 죄송합니다.
-      <br>
-      안타깝게도 면접 과정에서 합격 소식을 전해드리지 못하게 되었습니다.
-    </h1>
+  <div id="main">
+    <div id='content'>
+      <h1 style="padding-top: 7% !important;">{{user1.signup.name}}님 죄송합니다.
+        <br>
+        안타깝게도 면접 과정에서 합격 소식을 전해드리지 못하게 되었습니다.
+      </h1>
 
-<p>
-  불합격 소식에 아쉬움이 많으실 것 같아 이렇게 글을 씁니다.<br><br>
+      <p>
+        불합격 소식에 아쉬움이 많으실 것 같아 이렇게 글을 씁니다.<br><br>
 
-  먼저 멋쟁이사자처럼 평가 과정에 대해 설명할게요.<br><br>
-멋쟁이사자처럼의 지원 동기는 일정 기준을 넘으면 통과를 했습니다.
-저희가 생각하는 기준을 넘으면 그 이후 평가에서는 동일하게 평가합니다.<br>
-그 이후엔, 2번을 중점으로 3, 4번과 종합하여 멋쟁이사자처럼에 부합하는지 평가했습니다.<br>
-멋쟁이사자처럼은  단순히 코딩 교육 및 스터디를 하는 것이 중점이 아닌, '웹'개발을 중점으로 '창업'을 목표로 하는 동아리로 이에 맞는 분을 찾았습니다.
-<br>
-  <br>
-    맞습니다! 지원서 하나만으로 그 사람의 전부를 평가하기 힘들다는 것을 알고 있습니다. 저희 또한 같은 학생이니까요.<br>
-평가가 완벽할 수 없습니다. 하지만 평가를 할 수밖에 없어 다소 아쉽네요.<br>
-따라서 이번 멋쟁이사자처럼에 불합격했다고 해서 여러분의 역량이 부족한 것이 아니라 저희가 여러분의 역량을 몰라봤다고 생각하면 좋겠어요.<br>
-이번의 불합격으로 인해 여러분의 꿈을 이루는데 좌절하거나 포기하지 말고 지속해서 도전해 나갔으면 합니다.<br>
-그것이 여러분을 불합격시킨 멋쟁이사자처럼에 복수할 수 있는 가장 좋은 방법입니다.<br>
-<br>
-여러분이 새로운 곳에 도전하는 데 조금이나마 도움이 되었으면 하는 바람으로 몇 가지 제 생각을 감히 공유해 봅니다.<br>
-<br>
-지원서는 가능한 구체적으로 쓰면 좋겠어요. 저희가 아무것도 모르는 상태에서 여러분을 판단할 수 있는 수단은 지원서뿐이었어요.<br>
-물론 지원서는 여러분을 중요 키워드 중심으로 요약하여 작성하는게 맞긴 하지만, <br>
-지원서에 최소한 여러분에 대해 알 수 있을 만큼 충분히 적어주셨으면 좋았지 않았을까 생각해봅니다.<br><br> 그래서 글자 수에 제한을 두지 않았습니다.
-<br>그러나, 몇몇분들이 적어주신 몇 줄로만 1차적으로 판단해야 하는 저희로서는,<br> 그 몇 줄로 여러분들의 열정을 확인하고 여러분들과 함께 할 수 있다는 확신을 내리기 어려웠어요.<br>
-또한, 학습 과정의 경우 어떤 내용을 학습했다는 결과 위주의 내용이 아니라,<br> 어떤 내용을 학습하는데 어떤 어려움이 있었는데 어떻게 극복했다와 같이 구체적인 사례를 들어야 공감을 얻을 수 있거든요.<br>
-몰입 같은 경우도 힘든 과정을 어떤 과정으로 극복했으며 결과적으로 어떤 성취를 얻었는지,<br> 성취를 얻은 부분이 있다면 구체적인 증거까지 같이 제시하면 좋겠어요.<br>
-<br>
-지원서에서 얻고 싶은 가장 큰 부분은 여러분이 생각에만 그치지 않고 행동으로 얼마나 실행했는지를 보고 싶은 것으로 생각합니다.<br>
-누구나 생각은 할 수 있지만 이를 실행으로 옮겨 일정 수준의 성취를 만들기는 쉽지 않다고 생각해요.<br>
-작은 성취라도 만들어 가는 과정에서의 깨달음들을 보여준다면 여러분의 합격률이 조금은 더 높아지리라 생각해요.<br>
-<br>
-저도 더 많은 분과 같이하고 싶지만 아직은 현실적인 한계 때문에 소수의 인원만 선발할 수밖에 없는 게 너무 안타까워요.<br>
-앞으로 현실적인 한계를 극복해 더 많은 분과 같이 할 수 있도록 노력하겠습니다.<br>
-<br>
-멋쟁이사자처럼에 관심 가지고 지원해 주신 점에 대해 다시 한번 감사드립니다.
-<br>
-멋쟁이사자처럼 한국외대(서울) 올림.
-</p>
+        먼저 멋쟁이사자처럼 면접 평가 과정에 대해 설명할게요.<br><br>
 
-</div>
-</div>
-{%endif%}
+        공통적으로 7개의 질문을 드렸습니다.<br>
+        자기소개 및 지원 동기, 멋쟁이사자처럼이 어떤 동아리인지, 팀에서 맡고 싶은 역할, 코딩 경험, codecademy 수강 질문,  다른 활동 여부,
+          본인이 뽑혀야하는 이유 였습니다.<br>
 
     
-{%else%}
+        지원 동기는 일정 기준을 넘으면 통과를 했습니다. 
+        <br>멋쟁이사자처럼은 코딩 교육 및 스터디를 하는 것이 중점이 아닌, '웹'개발을 중점으로 '창업'을 목표로 하는 동아리로
+        저희는 이를 정확히 아는 지원자분을 찾았습니다.<br>   
+        면접자 분들 중 전공자 분들도 꽤 있었습니다.<br> 전공자 분들은 코딩 경험에 대해서 물어보았고, 어려웠던 점이나 코드에 대한 이해도를 여쭸습니다.
+     
+     비전공자 분들에게는 그동안 해왔던 노력을 파악하려고 했습니다. <br>
 
-<div id="main">
-  <div id='content'>
-    <h1 style="padding-top: 7% !important;">{{user1.signup.name}}님 죄송합니다.
-      <br>
-      안타깝게도 서류심사 과정에서 합격 소식을 전해드리지 못하게 되었습니다.
-    </h1>
+        저희가 생각하는 기준을 넘으면 그 이후 평가에서는 동일하게 평가합니다.<br>
+그리고 codecademy에 관한 확인 질문은 저희 생각보다 많은 분들이 대답해주지 못하셨습니다. 그래서 정답을 말해주신 분들은 좀 더 관심을 가지며 보았습니다.<br>
 
-<p>
-  불합격 소식에 아쉬움이 많으실 것 같아 이렇게 글을 씁니다.<br><br>
+        
+        <br>
+        맞습니다! 짧은 시간만으로 그 사람의 전부를 평가하기 힘들다는 것을 알고 있습니다. 저희 또한 같은 학생이니까요.<br>
+        평가가 완벽할 수 없습니다. 하지만 평가를 할 수밖에 없어 다소 아쉽네요.<br>
+        따라서 이번 멋쟁이사자처럼에 불합격했다고 해서 여러분의 역량이 부족한 것이 아니라 저희가 여러분의 역량을 몰라봤다고 생각하면 좋겠어요.<br>
+        이번의 불합격으로 인해 여러분의 꿈을 이루는데 좌절하거나 포기하지 말고 지속해서 도전해 나갔으면 합니다.<br>
+        그것이 여러분을 불합격시킨 멋쟁이사자처럼에 복수할 수 있는 가장 좋은 방법입니다.<br>
+        <br>
+        여러분이 새로운 곳에 도전하는 데 조금이나마 도움이 되었으면 하는 바람으로 몇 가지 제 생각을 감히 공유해 봅니다.<br>
+        <br>
 
-  먼저 멋쟁이사자처럼 평가 과정에 대해 설명할게요.<br><br>
-멋쟁이사자처럼의 지원 동기는 일정 기준을 넘으면 통과를 했습니다.
-저희가 생각하는 기준을 넘으면 그 이후 평가에서는 동일하게 평가합니다.<br>
-그 이후엔, 2번을 중점으로 3, 4번과 종합하여 멋쟁이사자처럼에 부합하는지 평가했습니다.<br>
-멋쟁이사자처럼은  단순히 코딩 교육 및 스터디를 하는 것이 중점이 아닌, '웹'개발을 중점으로 '창업'을 목표로 하는 동아리로 이에 맞는 분을 찾았습니다.
+        면접에서 저희가 했던 질문의 의도를 파악하고 그에 맞는 답을 해주셨으면 어땠을까 생각합니다.<br> 
+        지원서에 나와있는 내용보다는, 더 구체적이고 저희가 모르는 부분까지 말씀해주시기를 원했어요.<br>
+        아이디어 역시 관심을 가졌습니다. 하지만 몇몇 분들께서는 저희가 '창업'동아리 인 것을 간과하고, 단순히 프로젝트 경험을 위해 지원하셨습니다.<br>
+        물론 그것이 나쁜 것은 아닙니다. 그러나 본인의 아이디어에 대한 정확한 설명을 하지 못했던 그 부분이 저희에게는 많은 아쉬움으로 다가왔습니다.<br>
+        그리고 본인이 뽑혀야하는 이유를 좀 더 강하게 어필했으면 좋았을 것 같아요. 대부분의 지원자들이 시간, 열정을 말하는데 다른 분들과 차별성이 없다고 느껴질 수도 있어요.<br>
 <br>
-  <br>
-    맞습니다! 지원서 하나만으로 그 사람의 전부를 평가하기 힘들다는 것을 알고 있습니다. 저희 또한 같은 학생이니까요.<br>
-평가가 완벽할 수 없습니다. 하지만 평가를 할 수밖에 없어 다소 아쉽네요.<br>
-따라서 이번 멋쟁이사자처럼에 불합격했다고 해서 여러분의 역량이 부족한 것이 아니라 저희가 여러분의 역량을 몰라봤다고 생각하면 좋겠어요.<br>
-이번의 불합격으로 인해 여러분의 꿈을 이루는데 좌절하거나 포기하지 말고 지속해서 도전해 나갔으면 합니다.<br>
-그것이 여러분을 불합격시킨 멋쟁이사자처럼에 복수할 수 있는 가장 좋은 방법입니다.<br>
-<br>
-여러분이 새로운 곳에 도전하는 데 조금이나마 도움이 되었으면 하는 바람으로 몇 가지 제 생각을 감히 공유해 봅니다.<br>
-<br>
-지원서는 가능한 구체적으로 쓰면 좋겠어요. 저희가 아무것도 모르는 상태에서 여러분을 판단할 수 있는 수단은 지원서뿐이었어요.<br>
-물론 지원서는 여러분을 중요 키워드 중심으로 요약하여 작성하는게 맞긴 하지만, <br>
-지원서에 최소한 여러분에 대해 알 수 있을 만큼 충분히 적어주셨으면 좋았지 않았을까 생각해봅니다.<br><br> 그래서 글자 수에 제한을 두지 않았습니다.
-<br>그러나, 몇몇분들이 적어주신 몇 줄로만 1차적으로 판단해야 하는 저희로서는,<br> 그 몇 줄로 여러분들의 열정을 확인하고 여러분들과 함께 할 수 있다는 확신을 내리기 어려웠어요.<br>
-또한, 학습 과정의 경우 어떤 내용을 학습했다는 결과 위주의 내용이 아니라,<br> 어떤 내용을 학습하는데 어떤 어려움이 있었는데 어떻게 극복했다와 같이 구체적인 사례를 들어야 공감을 얻을 수 있거든요.<br>
-몰입 같은 경우도 힘든 과정을 어떤 과정으로 극복했으며 결과적으로 어떤 성취를 얻었는지,<br> 성취를 얻은 부분이 있다면 구체적인 증거까지 같이 제시하면 좋겠어요.<br>
-<br>
-지원서에서 얻고 싶은 가장 큰 부분은 여러분이 생각에만 그치지 않고 행동으로 얼마나 실행했는지를 보고 싶은 것으로 생각합니다.<br>
-누구나 생각은 할 수 있지만 이를 실행으로 옮겨 일정 수준의 성취를 만들기는 쉽지 않다고 생각해요.<br>
-작은 성취라도 만들어 가는 과정에서의 깨달음들을 보여준다면 여러분의 합격률이 조금은 더 높아지리라 생각해요.<br>
-<br>
-저도 더 많은 분과 같이하고 싶지만 아직은 현실적인 한계 때문에 소수의 인원만 선발할 수밖에 없는 게 너무 안타까워요.<br>
-앞으로 현실적인 한계를 극복해 더 많은 분과 같이 할 수 있도록 노력하겠습니다.<br>
-<br>
-멋쟁이사자처럼에 관심 가지고 지원해 주신 점에 대해 다시 한번 감사드립니다.
-<br>
-멋쟁이사자처럼 한국외대(서울) 올림.
-</p>
-
-</div>
-</div>
-
-{%endif%}
 
 
-{%else%}
+        또한, 학습 과정의 경우 어떤 내용을 학습했다는 결과 위주의 내용이 아니라,<br> 
+        어떤 내용을 학습하는데 어떤 어려움이 있었는데 어떻게 극복했다와 같이 구체적인 사례를 들어야 공감을 얻을 수
+        있어요.<br>
+        몰입 같은 경우도 힘든 과정을 어떤 과정으로 극복했으며 결과적으로 어떤 성취를 얻었는지,<br> 성취를 얻은 부분이 있다면 구체적인 증거까지 같이 제시하면 좋겠어요.<br>
+        <br>
+
+
+        면접에서 얻고 싶은 가장 큰 부분은 여러분이 생각에만 그치지 않고 행동으로 얼마나 실행했는지를 보고 싶은 것으로 생각합니다.<br>
+        누구나 생각은 할 수 있지만 이를 실행으로 옮겨 일정 수준의 성취를 만들기는 쉽지 않다고 생각해요.<br>
+        작은 성취라도 만들어 가는 과정에서의 깨달음들을 보여준다면 여러분의 합격률이 조금은 더 높아지리라 생각해요.<br>
+
+
+        <br>
+        저도 더 많은 분과 같이하고 싶지만 아직은 현실적인 한계 때문에 소수의 인원만 선발할 수밖에 없는 게 너무 안타까워요.<br>
+        앞으로 현실적인 한계를 극복해 더 많은 분과 같이 할 수 있도록 노력하겠습니다.<br>
+        <br>
+        멋쟁이사자처럼에 관심 가지고 지원해 주신 점에 대해 다시 한번 감사드립니다.
+        <br>
+        멋쟁이사자처럼 한국외대(서울) 올림.
+      </p>
+
+    </div>
+  </div>
+  {%endif%}
+
+
+  {%else%}
+
+  <div id="main">
+    <div id='content'>
+      <h1 style="padding-top: 7% !important;">{{user1.signup.name}}님 죄송합니다.
+        <br>
+        안타깝게도 서류심사 과정에서 합격 소식을 전해드리지 못하게 되었습니다.
+      </h1>
+
+      <p>
+        불합격 소식에 아쉬움이 많으실 것 같아 이렇게 글을 씁니다.<br><br>
+
+        먼저 멋쟁이사자처럼 평가 과정에 대해 설명할게요.<br><br>
+        멋쟁이사자처럼의 지원 동기는 일정 기준을 넘으면 통과를 했습니다.
+        저희가 생각하는 기준을 넘으면 그 이후 평가에서는 동일하게 평가합니다.<br>
+        그 이후엔, 2번을 중점으로 3, 4번과 종합하여 멋쟁이사자처럼에 부합하는지 평가했습니다.<br>
+        멋쟁이사자처럼은 단순히 코딩 교육 및 스터디를 하는 것이 중점이 아닌, '웹'개발을 중점으로 '창업'을 목표로 하는 동아리로 이에 맞는 분을 찾았습니다.
+        <br>
+        <br>
+        맞습니다! 지원서 하나만으로 그 사람의 전부를 평가하기 힘들다는 것을 알고 있습니다. 저희 또한 같은 학생이니까요.<br>
+        평가가 완벽할 수 없습니다. 하지만 평가를 할 수밖에 없어 다소 아쉽네요.<br>
+        따라서 이번 멋쟁이사자처럼에 불합격했다고 해서 여러분의 역량이 부족한 것이 아니라 저희가 여러분의 역량을 몰라봤다고 생각하면 좋겠어요.<br>
+        이번의 불합격으로 인해 여러분의 꿈을 이루는데 좌절하거나 포기하지 말고 지속해서 도전해 나갔으면 합니다.<br>
+        그것이 여러분을 불합격시킨 멋쟁이사자처럼에 복수할 수 있는 가장 좋은 방법입니다.<br>
+        <br>
+        여러분이 새로운 곳에 도전하는 데 조금이나마 도움이 되었으면 하는 바람으로 몇 가지 제 생각을 감히 공유해 봅니다.<br>
+        <br>
+        지원서는 가능한 구체적으로 쓰면 좋겠어요. 저희가 아무것도 모르는 상태에서 여러분을 판단할 수 있는 수단은 지원서뿐이었어요.<br>
+        물론 지원서는 여러분을 중요 키워드 중심으로 요약하여 작성하는게 맞긴 하지만, <br>
+        지원서에 최소한 여러분에 대해 알 수 있을 만큼 충분히 적어주셨으면 좋았지 않았을까 생각해봅니다.<br><br> 그래서 글자 수에 제한을 두지 않았습니다.
+        <br>그러나, 몇몇분들이 적어주신 몇 줄로만 1차적으로 판단해야 하는 저희로서는,<br> 그 몇 줄로 여러분들의 열정을 확인하고 여러분들과 함께 할 수 있다는 확신을 내리기 어려웠어요.<br>
+        또한, 학습 과정의 경우 어떤 내용을 학습했다는 결과 위주의 내용이 아니라,<br> 어떤 내용을 학습하는데 어떤 어려움이 있었는데 어떻게 극복했다와 같이 구체적인 사례를 들어야 공감을 얻을 수
+        있거든요.<br>
+        몰입 같은 경우도 힘든 과정을 어떤 과정으로 극복했으며 결과적으로 어떤 성취를 얻었는지,<br> 성취를 얻은 부분이 있다면 구체적인 증거까지 같이 제시하면 좋겠어요.<br>
+        <br>
+        지원서에서 얻고 싶은 가장 큰 부분은 여러분이 생각에만 그치지 않고 행동으로 얼마나 실행했는지를 보고 싶은 것으로 생각합니다.<br>
+        누구나 생각은 할 수 있지만 이를 실행으로 옮겨 일정 수준의 성취를 만들기는 쉽지 않다고 생각해요.<br>
+        작은 성취라도 만들어 가는 과정에서의 깨달음들을 보여준다면 여러분의 합격률이 조금은 더 높아지리라 생각해요.<br>
+        <br>
+        저도 더 많은 분과 같이하고 싶지만 아직은 현실적인 한계 때문에 소수의 인원만 선발할 수밖에 없는 게 너무 안타까워요.<br>
+        앞으로 현실적인 한계를 극복해 더 많은 분과 같이 할 수 있도록 노력하겠습니다.<br>
+        <br>
+        멋쟁이사자처럼에 관심 가지고 지원해 주신 점에 대해 다시 한번 감사드립니다.
+        <br>
+        멋쟁이사자처럼 한국외대(서울) 올림.
+      </p>
+
+    </div>
+  </div>
+
+  {%endif%}
+
+
+  {%else%}
 
 
 
 </body>
 <script>
-    alert('지원 이력이 없습니다!')
-window.location.href = '/';
+  alert('지원 이력이 없습니다!')
+  window.location.href = '/';
 </script>
 {%endif%}
 <style>
-  h1{
+  h1 {
     /* margin-top: 5%; */
     padding-left: 1%;
     padding-top: 2%;
-    color:white;
+    color: white;
     font-family: 'KOMACON';
 
   }
-  nav{
-    background-color: rgba( 0, 0, 0, 0.3 ) !important;
+
+  nav {
+    background-color: rgba(0, 0, 0, 0.3) !important;
     position: absolute;
   }
-  #content{
-    
+
+  #content {
+
     width: 100%;
     height: 100%;
 
-    background-color: rgba( 0, 0, 0, 0.3 )
+    background-color: rgba(0, 0, 0, 0.3)
   }
-  @font-face { font-family: 'KOMACON'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); font-weight: normal; font-style: normal; }
-  p{
-    color:white;
-    word-break:keep-all;
+
+  @font-face {
+    font-family: 'KOMACON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  p {
+    color: white;
+    word-break: keep-all;
     padding: 2%;
-    font-size:larger;
+    font-size: larger;
     font-weight: 600;
     letter-spacing: 2px;
     font-family: 'KOMACON';
     line-height: 28px;
-    
+
   }
-  #main{
+
+  #main {
     font-family: "GmarketSansMedium";
-      text-align: left;
-     
+    text-align: left;
+
     /* margin-top: 5%; */
     /* font-weight:520; */
     /* padding: 2%; */
     width: 100%;
     /* height: 120%; */
     background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t31.0-8/819141_540051582686309_853715522_o.jpg?_nc_cat=110&_nc_sid=7aed08&_nc_ohc=lJY7Uz7vKjsAX_3Froa&_nc_ht=scontent-gmp1-1.xx&oh=a1b829c225f9ad1b8bcc8c4b0633cb58&oe=5E9DF085');
-    background-repeat : no-repeat;
-        background-size : cover;
-        background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
-  body{
+
+  body {
     overflow-y: scroll !important;
-    height:80% !important;
+    height: 80% !important;
 
   }
 
 
-  #main1{
+  #main1 {
     font-family: "GmarketSansMedium";
-      text-align: center;
-     
+    text-align: center;
+
     margin-top: 5%;
     /* font-weight:520; */
     /* padding: 2%; */
     width: 100%;
     height: 100%;
-    background-repeat : no-repeat;
-        background-size : cover;
-        background-position: center center;
-        background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t31.0-8/21457847_1621457054545751_2673566641233692483_o.jpg?_nc_cat=104&_nc_sid=e007fa&_nc_eui2=AeFgB63dgg2OkRoGOy-4XdJgP3PCdhCS0bMQJllfVq-xXXVKZxglUuYG_2vK8Wjb7TMzv-seljeNMLK3UzO_vuYORlNRk4RRLmvOc2lAqmY1AA&_nc_ohc=NlONTBInW20AX8t-5RN&_nc_ht=scontent-gmp1-1.xx&oh=3b303922b9ad2a9f86954753f9fbb96c&oe=5EA00966');
-      /* background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/68464268_2567272956630818_8276560047073394688_o.jpg?_nc_cat=100&_nc_sid=e007fa&_nc_eui2=AeFsRYfCH4x0y86hvcOy4SckOfVAnxOpCRPMs6EYFhZwpqhddnAIlxhXVasjywtoBiTtJT8gJAjDbqEXKoX1V6hj0XHpOLxIE6EnWPc8SzmunA&_nc_ohc=zIJayBORrMQAX-Pu71b&_nc_ht=scontent-gmp1-1.xx&oh=923e8a676fd37437881184a5435760dc&oe=5EA36978'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t31.0-8/21457847_1621457054545751_2673566641233692483_o.jpg?_nc_cat=104&_nc_sid=e007fa&_nc_eui2=AeFgB63dgg2OkRoGOy-4XdJgP3PCdhCS0bMQJllfVq-xXXVKZxglUuYG_2vK8Wjb7TMzv-seljeNMLK3UzO_vuYORlNRk4RRLmvOc2lAqmY1AA&_nc_ohc=NlONTBInW20AX8t-5RN&_nc_ht=scontent-gmp1-1.xx&oh=3b303922b9ad2a9f86954753f9fbb96c&oe=5EA00966');
+    /* background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/68464268_2567272956630818_8276560047073394688_o.jpg?_nc_cat=100&_nc_sid=e007fa&_nc_eui2=AeFsRYfCH4x0y86hvcOy4SckOfVAnxOpCRPMs6EYFhZwpqhddnAIlxhXVasjywtoBiTtJT8gJAjDbqEXKoX1V6hj0XHpOLxIE6EnWPc8SzmunA&_nc_ohc=zIJayBORrMQAX-Pu71b&_nc_ht=scontent-gmp1-1.xx&oh=923e8a676fd37437881184a5435760dc&oe=5EA36978'); */
     /* background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/54521423_2311952365496213_1865508500872888320_o.jpg?_nc_cat=101&_nc_sid=e007fa&_nc_ohc=ttdPwfuyLmgAX_sGXzy&_nc_ht=scontent-gmp1-1.xx&oh=b0fac2bd5d87beb7dbd68fa912f0a1a3&oe=5E9BE39A'); */
+  }
+
+  #main12 {
+    font-family: "GmarketSansMedium";
+    text-align: center;
+
+    margin-top: 5%;
+    /* font-weight:520; */
+    /* padding: 2%; */
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t31.0-8/21457847_1621457054545751_2673566641233692483_o.jpg?_nc_cat=104&_nc_sid=e007fa&_nc_eui2=AeFgB63dgg2OkRoGOy-4XdJgP3PCdhCS0bMQJllfVq-xXXVKZxglUuYG_2vK8Wjb7TMzv-seljeNMLK3UzO_vuYORlNRk4RRLmvOc2lAqmY1AA&_nc_ohc=NlONTBInW20AX8t-5RN&_nc_ht=scontent-gmp1-1.xx&oh=3b303922b9ad2a9f86954753f9fbb96c&oe=5EA00966'); */
+    /* background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/68464268_2567272956630818_8276560047073394688_o.jpg?_nc_cat=100&_nc_sid=e007fa&_nc_eui2=AeFsRYfCH4x0y86hvcOy4SckOfVAnxOpCRPMs6EYFhZwpqhddnAIlxhXVasjywtoBiTtJT8gJAjDbqEXKoX1V6hj0XHpOLxIE6EnWPc8SzmunA&_nc_ohc=zIJayBORrMQAX-Pu71b&_nc_ht=scontent-gmp1-1.xx&oh=923e8a676fd37437881184a5435760dc&oe=5EA36978'); */
+    background-image: url('https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/54521423_2311952365496213_1865508500872888320_o.jpg?_nc_cat=101&_nc_sid=e007fa&_nc_ohc=ttdPwfuyLmgAX_sGXzy&_nc_ht=scontent-gmp1-1.xx&oh=b0fac2bd5d87beb7dbd68fa912f0a1a3&oe=5E9BE39A');
   }
 </style>
 
@@ -237,8 +293,8 @@ window.location.href = '/';
 {% else %}
 
 <script>
-    alert('로그인이 필요합니다.')
-window.location.href = '/main';
+  alert('로그인이 필요합니다.')
+  window.location.href = '/main';
 </script>
 
 {%endif%}
