@@ -121,7 +121,7 @@ def assess(request, pk):
 
 def user_list(request):
     if request.user.is_staff:
-        users = Signup.objects.all()
+        users = Apply.objects.all()
         return render(request, 'users.html', {'users' : users})
     else:
         return render(request, 'alert.html')

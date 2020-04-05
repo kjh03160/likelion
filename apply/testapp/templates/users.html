@@ -207,19 +207,21 @@
   <div id="d">
 
 {% for q in users %}
+{% if q.final_pf == "P" %}
 <div class="user-profile" style="float: left; margin: 1%">
 	<img class="avatar" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t31.0-8/p960x960/16700336_1409094205782038_5866806659717364072_o.png?_nc_cat=105&_nc_sid=85a577&_nc_ohc=cBaMTjJ5DYQAX_XQT1W&_nc_ht=scontent-ssn1-1.xx&oh=9e7d2e79c9c1d6e89304b903db714927&oe=5E901E2B" alt="Ash" />
-    <div class="username">{{q.name}}, {{q.user.username}}</div>
+    <div class="username">{{q.singup.name}}, {{q.user.username}}</div>
   <div class="bio">
-    {{q.major}}
+    {{q.signup.major}}
   </div>
     <div class="description" style="color: black;">
-      성별 : {{q.gender}}<br>
-      번호 : {{q.phone}}<br>
-      이메일:{{q.user.email}}
+      성별 : {{q.signup.gender}}<br>
+      번호 : {{q.signup.phone}}<br>
+      이메일:{{q.signup.user.email}}
   </div>
  
 </div>
+{%endif%}
 {%endfor%}
 
 </div>
