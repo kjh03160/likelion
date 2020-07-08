@@ -5,18 +5,9 @@ from django.contrib.auth.decorators import login_required
 import datetime
 
 
-def manage(request):
-    if request.method == "POST":
-        objs = Apply.objects.filter(user = request.user)[0]
-        first_pf = request.POST['q1']
-        final_pf = request.POST['q1']
-
 
 @login_required
-def fix(request):
-    return render(request, 'fix.html')
-@login_required
-def update(request):
+def update(request):    # 지원서 수정
     if request.method == "POST":
         now = datetime.datetime.now()
         now = now.strftime('%Y/%m/%d %H:%M:%S')
@@ -32,19 +23,15 @@ def update(request):
         objs.q5 = request.POST['q5']
         objs.codecademy = request.POST['codecademy']
         objs.interview = request.POST['interview']
-
-
         objs.save()  
-        return render(request, 'complete.html') #추후에 complete로 바꿀것
-
+        return render(request, 'complete.html') 
     else:
         objs = Apply.objects.get(user = request.user)
-
         
     return render(request, 'fix.html', {"q" : objs})
 
 @login_required
-def create(request):
+def create(request):    # 지원서 새로 작성
     
     objs = Apply.objects.filter(user = request.user)
     if len(objs):
@@ -71,13 +58,13 @@ def create(request):
         apply.user = request.user
         apply.signup = Signup.objects.get(user=request.user)
         apply.save()
-        return render(request, 'complete.html') #추후에 complete로 바꿀것
+        return render(request, 'complete.html') 
     else:
         # 그냥 맨 처음 들어올때
         return render(request, 'fix.html', {'q' : objs})
 
 
-def view(request):
+def view(request):  # 운영진 페이지
     if request.user.is_staff:
         posts = Apply.objects.all().order_by('-first_pf').filter(first_pf="P")
         pass_num = 0
@@ -95,7 +82,7 @@ def view(request):
     else:
         return render(request, 'alert.html')
 
-def lookup(request, pk):
+def lookup(request, pk):    # 운영진 지원자 지원서 보기 상세 페이지
     if request.user.is_staff:
 
         post = get_object_or_404(Apply, pk = pk)
@@ -103,7 +90,7 @@ def lookup(request, pk):
     else:
         return render(request, 'alert.html')
 
-def assess(request, pk):
+def assess(request, pk):    # 운영진 P/F 평가 페이지
     if request.user.is_superuser:
         post = get_object_or_404(Apply, pk = pk)
         if request.method == "POST":
@@ -119,18 +106,18 @@ def assess(request, pk):
         return render(request, 'alert.html')
 
 
-def user_list(request):
+def user_list(request): # 지원자 현황 페이지
     if request.user.is_staff:
         users = Apply.objects.all()
         return render(request, 'users.html', {'users' : users})
     else:
         return render(request, 'alert.html')
 
-def recruit(request):
+def recruit(request):   # 모집 요강 설명 페이지
     return render(request, 'recruit.html')
 
 
-def result(request):
+def result(request):    # 지원자 결과 확인 페이지
     user1 = Apply.objects.filter(user = request.user)
 
     now = datetime.datetime.now()
@@ -148,47 +135,6 @@ def result(request):
         return render (request, 'result.html', {'user1' : None})
 
 
-def phone(request):
+def phone(request): # 합격자 폰 번호 보기
     objs = Apply.objects.filter(first_pf='P')
     return render(request, 'phone.html', {'phones' : objs})
-
-
-def cand(request):
-    if request.user.is_staff:
-        if request.method == "POST":
-            apply = Apply()
-            apply.q1 = request.POST['q1']
-            apply.q2 = request.POST['q2']
-            apply.q3 = request.POST['q3']
-            apply.q4 = request.POST['q4']
-            apply.q5 = request.POST['q5']
-            apply.codecademy = request.POST['codecademy']
-            apply.interview = request.POST['interview']
-            apply.user = request.user
-            apply.signup = Signup.objects.get(user=request.user)
-            apply.save()
-            return redirect('/')
-        else:
-            return render(request, 'cand.html')
-    else:
-        return render(request, 'alert.html')
-
-
-
-def view_cand(request):
-    if request.user.is_staff:
-        now = datetime.datetime.now()
-        now = now.strftime('%Y/%m/%d %H:%M:%S')
-        std = datetime.datetime(2020,4,4,10,00,00)
-        std = std.strftime('%Y/%m/%d %H:%M:%S')
-        if now < std:
-            return render(request, 'not.html')
-        else:
-            users = Apply.objects.all()
-            result = []
-            for i in users:
-                if i.user.is_staff:
-                    result.append(i)
-            return render(request, 'cand_view.html', {'qs' : result})
-    else:
-        return render(request, 'alert.html')
