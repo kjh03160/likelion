@@ -37,8 +37,7 @@ def signup_page(request):
             return render(request, 'signup.html', {'error':'학번이 잘못되었거나 비밀번호가 일치하지 않습니다'})
     return render(request, 'signup.html')
 
-def complete(request):
-    return render(request, 'complete.html')
+
 
 
 def login(request):
