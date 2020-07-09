@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 from sheet.models import Signup
 
 class Apply(models.Model):
-    user = models.ForeignKey(User, related_name='apply_user',on_delete=models.CASCADE)
-    signup = models.ForeignKey(Signup, related_name='signup_user',on_delete=models.CASCADE)
+    user = models.OneToOneField(User, related_name='apply_user',on_delete=models.CASCADE)
+    signup = models.OneToOneField(Signup, related_name='signup_user',on_delete=models.CASCADE)
     HTML = (
         ('Y', 'yes'),
         ('N', 'no')
